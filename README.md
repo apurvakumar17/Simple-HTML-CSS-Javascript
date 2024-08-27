@@ -1,2 +1,2 @@
 # Simple-HTML-CSS-Javascript
-This repository contains all my HTML5 websites which I have written
+This repository contains all my HTML, CSS & Java websites which I have written
