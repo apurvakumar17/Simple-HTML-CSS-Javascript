@@ -1,0 +1,75 @@
+#circle1{
+    height:100px;
+    width:100px;
+    background-color: rgb(198, 0, 0);
+    border:10px solid rgb(255, 61, 61);
+    border-radius: 50%;
+}
+#circle3{
+    height:100px;
+    width:100px;
+    background-color: green;
+    border:10px solid rgb(85, 221, 17);
+    border-radius: 50%;
+}
+#circle2{
+    height:100px;
+    width:100px;
+    background-color: rgb(255, 217, 0);
+    border:10px solid rgb(248, 239, 67);
+    border-radius: 50%;
+}
+
+/*------------------------*/
+
+*{
+    padding:0px;
+    margin:0px;
+}
+#account2{
+    font-family: "times new roman";
+    color:white;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size:15px;
+    text-decoration: none;
+
+}
+#my_cart2{
+    font-family: "times new roman";
+    color:white;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size:15px;
+    text-decoration: none;
+
+}
+#contact_us2{
+    font-family: "times new roman";
+    color:white;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size:15px;
+    text-decoration: none;
+
+}
+#search2{
+    font-family: "times new roman";
+    color:white;
+    background-color: #f08804;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#main2{
+    background-color: #0f1111;
+    color:orange;
+    height:60px;
+    font-size: 25px;
+    
+}
+#name{
+    text-decoration: none;
+    color:#f08804;
+    font-size:25px;
+}
+

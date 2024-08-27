@@ -1,0 +1,102 @@
+#box1{
+    background-color: rgba(255,0,0,0.5);
+    width:100px;
+    height:100px;
+    margin:10px;
+    border: 2px solid red;
+    display:inline-block;
+    position: relative;
+    border-radius: 50%;
+    top: 50px;
+    left:100px;
+    
+}
+#box2{
+    background-color: rgba(0,255,0,0.5);
+    width:100px;
+    height:100px;
+    margin:10px;
+    border: 2px solid rgb(0, 253, 0);
+    display:inline-block;
+    position: relative;
+    border-radius: 50%;
+    top:0px;
+}
+#box3{
+    background-color: rgba(0,0,255,0.5);
+    width:100px;
+    height:100px;
+    margin:10px;
+    border: 2px solid rgb(74, 162, 255);
+    display:inline-block;
+    position: relative;
+    border-radius: 50%;
+    top: 50px;
+    right:100px;
+}
+#footer{
+    background-color: pink;
+    border: 2px solid red;
+    position: fixed;
+    height: 10vh;
+    width:100vw;
+    margin: 0px;
+    padding:0px;
+    position: fixed;
+    bottom:0px;
+    font-family:'arial';
+    font-weight: bolder;
+    color:red;
+    font-size:4rem;
+    text-align: center;
+}
+
+
+*{
+    margin: 0px;
+    padding:0px;
+}
+#header{
+    background-color: pink;
+    border: 2px solid red;
+    position: fixed;
+    height: 10vh;
+    width:100vw;
+    margin: 0px;
+    padding:0px;
+    position: fixed;
+    top:0px;
+    font-family:'arial';
+    font-weight: bolder;
+    color:red;
+    font-size:4rem;
+    text-align: center;
+}
+#content{
+    background-color: grey;
+    border: 2px dotted darkslategray;
+    width:100vw;
+    height:90vh;
+    color:white;
+    font-weight: lighter;
+    font-family:'arial';
+
+}
+#content2{
+    width:100vw;
+    height:20vh;
+}
+#content0{
+    width:100vw;
+    height:10vh;
+}
+#ironman{
+    width:100vw;
+}
+#glassview{
+    position:fixed;
+    bottom:20vh;
+}
+#paragraph{
+    margin:10px;
+}

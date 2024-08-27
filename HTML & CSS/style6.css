@@ -1,0 +1,25 @@
+div{
+    background-color: pink;
+    border:2px solid red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding:50px;
+    text-align: center;
+    margin-left: 50px;
+}
+#one{
+    background-color: pink;
+    border:2px solid red;
+    border-radius: 0%;
+    height: 100px;
+    width: 100px;
+    padding:10px 20px 30px 40px;
+    text-align: center;
+}
+#two{
+    margin:50px;
+}
+#three{
+    margin:10px 20px 30px 40px;
+}

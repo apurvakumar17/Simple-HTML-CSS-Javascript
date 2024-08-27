@@ -1,0 +1,11 @@
+body{
+    margin:0px;
+}
+div{
+    background-color: #3b3b3b;
+    height:100px;
+    width:100vw;
+    position: fixed;
+    top:50vh;
+    box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.627);
+}

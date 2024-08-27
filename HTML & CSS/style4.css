@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(235, 235, 235);
+}
+#one{
+    text-align: center;
+    font-weight: bolder;
+    font-family:"arial";
+    text-decoration: brown dotted underline;
+    line-height: 30px;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+h2{
+    text-align: right;
+    text-decoration: overline;
+}
+h3{
+    text-decoration: blue line-through;
+    color:red;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    text-decoration: wavy underline;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+#meta{
+    font-weight: lighter;
+    font-family: "tahoma";
+
+}

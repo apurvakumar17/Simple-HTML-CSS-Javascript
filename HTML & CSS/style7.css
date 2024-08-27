@@ -1,0 +1,30 @@
+*{
+    height: 100px;
+    width:100px;
+}
+#box1{
+    background-color: red;
+    height: 100px;
+    width:100px;
+    margin:50px;
+    padding:25px;
+    display:inline-block;
+    
+}
+#box2{
+    background-color: green;
+    height: 100px;
+    width:100px;
+    margin:50px;
+    padding:25px;
+    display:inline-block;
+    visibility: hidden;
+}
+#box3{
+    background-color: yellow;
+    height: 100px;
+    width:100px;
+    margin:50px;
+    padding:25px;
+    display:inline-block;
+}

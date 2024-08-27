@@ -1,0 +1,93 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+#account2{
+    font-family: "times new roman";
+    color:white;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size:15px;
+    text-decoration: none;
+
+}
+#my_cart2{
+    font-family: "times new roman";
+    color:white;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size:15px;
+    text-decoration: none;
+
+}
+#contact_us2{
+    font-family: "times new roman";
+    color:white;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-size:15px;
+    text-decoration: none;
+
+}
+#search2{
+    font-family: "times new roman";
+    color:white;
+    background-color: #f08804;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#main2{
+    background-color: #0f1111;
+    color:orange;
+    height:60px;
+    font-size: 25px;
+    
+}
+#name{
+    text-decoration: none;
+    color:#f08804;
+    font-size:25px;
+}
+
+#footer{
+    background-color: darkslategrey;
+    height:60px;
+}
+#content{
+    background-color: #080c0f;
+    height:100vh;
+}
+p{
+    text-align: center;
+    padding:1vh;
+    color:white;
+    font-weight: lighter;
+    font-size: smaller;
+}
+img{
+    width: 100vw;
+}
+#box1{
+    background-color: rgba(255,0,0,0.5);
+    width:100px;
+    height:100px;
+    margin:10px;
+    border: 2px solid red;
+    display:inline-block;
+}
+#box2{
+    background-color: rgba(0,255,0,0.5);
+    width:100px;
+    height:100px;
+    margin:10px;
+    border: 2px solid rgb(0, 253, 0);
+    display:inline-block;
+}
+#box3{
+    background-color: rgba(0,0,255,0.5);
+    width:100px;
+    height:100px;
+    margin:10px;
+    border: 2px solid rgb(74, 162, 255);
+    display:inline-block;
+}

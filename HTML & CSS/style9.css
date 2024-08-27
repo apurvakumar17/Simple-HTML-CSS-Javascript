@@ -1,0 +1,71 @@
+
+body{
+    background-image: url("https://t3.ftcdn.net/jpg/02/77/30/98/360_F_277309825_h8RvZkoyBGPDocMtippdfe3497xTrOXO.jpg");
+    height:2000px;
+}
+#box1{
+    background-color: rgba(127, 255, 212, 0.5);
+    height: 100px;
+    width:100px;
+    border: 2px solid aqua;
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/July/BTF/Aug16/PCQC_New_sports_low._SY116_CB567099711_.jpg");
+    background-size: cover;
+    margin:10px;
+}
+#text1{
+    font-size: 16px;
+    color:white;
+    position:relative;
+    bottom:18px;
+    left:2px;
+}
+#box2{
+    background-color: rgba(127, 255, 212, 0.5);
+    height: 100px;
+    width:100px;
+    border: 2px solid aqua;
+    background-image: url("https://m.media-amazon.com/images/I/61UzQMCRaeL._AC_SY200_.jpg");
+    background-size: cover;
+    margin:10px;
+}
+#text2{
+    font-size: 16px;
+    color:black;
+    position:relative;
+    bottom:18px;
+    left:2px;
+}
+#longbox1{
+    background-color: rgba(165, 42, 42, 0.5);
+    height:100px;
+    width:200px;
+    margin:10px;
+    border: 2px solid brown;
+    background-image: url("https://m.media-amazon.com/images/I/812Qr+6phJL._AC_SY170_.jpg");
+    background-size:cover;
+    color:white;
+    text-shadow: 1px 1px 2px black;
+}
+#longbox2{
+    background-color: rgba(165, 42, 42, 0.5);
+    height:100px;
+    width:200px;
+    margin:10px;
+    border: 2px solid brown;
+    background-image: url("https://m.media-amazon.com/images/I/812Qr+6phJL._AC_SY170_.jpg");
+    background-size:contain;
+    color:white;
+    text-shadow: 1px 1px 2px black;
+}
+#longbox3{
+    background-color: rgba(165, 42, 42, 0.5);
+    height:200px;
+    width:200px;
+    margin:10px;
+    border: 2px solid brown;
+    background-image: url("https://m.media-amazon.com/images/I/812Qr+6phJL._AC_SY170_.jpg");
+    background-size:auto;
+    background-repeat: no-repeat;
+    color:white;
+    text-shadow: 1px 1px 2px black;
+}
