@@ -1,0 +1,97 @@
+#n{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+#n:hover{
+    background-color: aqua;
+}
+#n:active{
+    background-color: blue;
+}
+
+#m{
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+#m:hover{
+    background-color: rgb(255, 0, 242);
+    transform: translate(20px);
+}
+#m:active{
+    background-color:red;
+    transform: translate(20px,20px);
+}
+
+#o{
+    background-color: rgb(255, 253, 192);
+    height: 100px;
+    width: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+#o:hover{
+    background-color: rgb(255, 247, 0);
+    transform: rotate(45deg);
+}
+#o:active{
+    background-color:rgb(255, 213, 0);
+    transform: rotate(90deg);
+}
+
+#p{
+    background-color: rgb(206, 255, 192);
+    height: 100px;
+    width: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+#p:hover{
+    background-color: rgb(51, 255, 0);
+    rotate: x  45deg;
+}
+#p:active{
+    background-color:rgb(0, 166, 0);
+    rotate: y  45deg;
+}
+
+
+#q{
+    background-color: rgb(192, 193, 255);
+    height: 100px;
+    width: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+#q:hover{
+    background-color: rgb(76, 105, 250);
+    transform: scale(1.2);
+}
+#q:active{
+    background-color:rgb(0, 11, 166);
+    color:grey;
+    transform: scale(0.9,1.5);
+}
+
+
+#r{
+    background-color: rgb(255, 192, 192);
+    height: 100px;
+    width: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+#r:hover{
+    background-color: rgb(250, 76, 76);
+    transform: skew(45deg);
+}
+#r:active{
+    background-color:rgb(166, 0, 0);
+    color:grey;
+    transform: skew(-45deg);
+}
