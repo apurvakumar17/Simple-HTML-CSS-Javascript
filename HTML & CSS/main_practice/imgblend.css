@@ -1,0 +1,27 @@
+body{
+    margin:0px;
+    background-color: cadetblue;
+}
+img{
+    background-blend-mode: multiply;
+    width:100vw
+}
+div{
+    background-color: cadetblue;
+    background-image: url("https://cdn2.hubspot.net/hubfs/53/image8-2.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+button{
+    position: relative;
+    bottom: 100px;
+    width: 50px;
+    height: 50px; 
+}
+button:focus { 
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}

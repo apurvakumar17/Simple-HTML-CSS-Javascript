@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+#main{
+    width:100vw;
+    height:100vh;
+    background-color: aquamarine;
+    display: flex;
+    align-items: end;
+}
+
+#ball{
+    height: 10vw;
+    width: 10vw;
+    background-color: red;
+    border-radius: 50%;
+    position:absolute;
+    bottom:0%;
+    animation:animateX 3s linear alternate infinite,animateY 1s ease-out alternate infinite;
+}
+
+@keyframes animateX {
+    from{
+        left: 0%;
+    }
+    to{
+        left:90%;
+    }
+}
+
+@keyframes animateY {
+    from{
+        bottom: 0%;
+    }
+    to{
+        bottom:40%;
+    }
+}
