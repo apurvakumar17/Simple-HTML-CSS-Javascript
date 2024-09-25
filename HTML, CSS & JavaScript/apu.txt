@@ -1,0 +1,68 @@
+childnodes
+VM95:1 Uncaught ReferenceError: childnodes is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM95:1
+[NEW] Explain Console errors by using Copilot in Edge: click
+         
+         to explain an error. 
+        Learn more
+        Don't show again
+document.body
+<body>​<div id=​"mainbg">​<div id=​"background">​<a href=​"#leftnav">​…​</a>​<div id=​"leftnav">​…​</div>​</div>​</div>​</body>​
+20[Deprecation] The 'textprediction' attribute will be removed in the future. Use the 'writingsuggestions' attribute instead. See <URL> for more information.
+document.body.childNodes
+NodeList(3) [text, div#mainbg, text]
+document.body.childElementCount
+1
+document.body.childNodes[0]
+#text
+document.body.childNodes[1]
+<div id=​"mainbg">​…​</div>​
+document.body.childNodes[1].childNodes
+NodeList(3) [text, div#background, text]
+document.body.childNodes[1].childNodes[1].childNodes
+NodeList(5) [text, a, text, div#leftnav, text]
+document.body.childNodes[1].childNodes[1].childNodes[3]
+<div id=​"leftnav" style=​"background-color:​ blue;​">​…​</div>​<a href=​"#background">​…​</a>​<ul id=​"nitems">​…​</ul>​<div id=​"sociobox">​…​</div>​flex</div>​
+document.body.childNodes[1].childNodes[1].childNodes[3].childNodes
+NodeList(7) [text, a, text, ul#nitems, text, div#sociobox, text]
+document.body.childNodes[1].childNodes[1].childNodes[3].st
+undefined
+document.body.childNodes[1].childNodes[1].childNodes[3].style.backgroundColor="red"
+'red'
+document.body.childNodes[1].childNodes[1].childNodes[3].style.backgroundColor="green"
+'green'
+document.body.childNodes[1].childNodes[1].childNodes[3].style.backgroundColor="blue"
+'blue'
+var nav=document.body.childNodes[1].childNodes[1].childNodes[3]
+undefined
+nav
+<div id=​"leftnav" style=​"background-color:​ blue;​">​…​</div>​
+nav.style.backgroundColor="orange"
+'orange'
+nav.style.backgroundColor="redorange"
+'redorange'
+nav.style.backgroundColor="orangered"
+'orangered'
+nav.firstElementChild
+<a href=​"#background">​…​</a>​
+nav.lastElementChild
+<div id=​"sociobox">​…​</div>​flex
+nav.lastElementChild.childNodes
+NodeList(9) [text, i#s1.fa-brands.fa-youtube.socioicons, text, i#s2.fa-brands.fa-facebook.socioicons, text, i#s3.fa-brands.fa-linkedin.socioicons, text, i#s4.fa-brands.fa-spotify.socioicons, text]
+nav.lastElementChild.children
+HTMLCollection(4) [i#s1.fa-brands.fa-youtube.socioicons, i#s2.fa-brands.fa-facebook.socioicons, i#s3.fa-brands.fa-linkedin.socioicons, i#s4.fa-brands.fa-spotify.socioicons, s1: i#s1.fa-brands.fa-youtube.socioicons, s2: i#s2.fa-brands.fa-facebook.socioicons, s3: i#s3.fa-brands.fa-linkedin.socioicons, s4: i#s4.fa-brands.fa-spotify.socioicons]
+nav.lastElementChild.children[1].color="blue"
+'blue'
+nav.lastElementChild.children
+HTMLCollection(4) [i#s1.fa-brands.fa-youtube.socioicons, i#s2.fa-brands.fa-facebook.socioicons, i#s3.fa-brands.fa-linkedin.socioicons, i#s4.fa-brands.fa-spotify.socioicons, s1: i#s1.fa-brands.fa-youtube.socioicons, s2: i#s2.fa-brands.fa-facebook.socioicons, s3: i#s3.fa-brands.fa-linkedin.socioicons, s4: i#s4.fa-brands.fa-spotify.socioicons]
+nav.lastElementChild.children[1].nextElementSibling
+<i class=​"fa-brands fa-linkedin socioicons" id=​"s3">​…​</i>​
+nav.lastElementChild.children[1].nextSibling
+#text
+nav.lastElementChild.children[1].previousElementSibling
+<i class=​"fa-brands fa-youtube socioicons" id=​"s1">​…​</i>​
+nav.lastElementChild.children[1].previousSibling
+#text
+nav.parentElement
+<div id=​"background">​…​</div>​

@@ -1,0 +1,23 @@
+body{
+    margin:0;
+    height:100vh;
+}
+#mainbg{
+    height:100vh;
+    background-color: rgba(128, 128, 128, 0.118);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#box1, #box2, #box3, #box4{
+    width: 15vw;
+    height: 15vw;
+    border: 0.5vw solid black;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: aliceblue;
+}
