@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Warp Drive Output: <meter min="0" max="10" low="3" optimum="7" high="9" value="7"
+            title="Captain she can't take much more of this!"></meter></p>
+    <p>Progress: <progress id="progressBar" max="100.00" value="70">
+            33.1%</progress></p>
+    <p contenteditable="true">This paragraph of text is editable. Click it
+        and you will see. Of course there is no sense of saving it with code to
+        transmit the information to the server. This paragraph of text is editable.
+        Click it and you will see. Of course there is no sense of saving it with
+        code to transmit the information to the server.</p>
+    <p ondblclick="this.contentEditable=true;this.className='inEdit';"
+        onblur="this.contentEditable=false;this.className='';">This paragraph
+        uses some simple script to be editable. Double-click the text to
+        begin editing.</p>
+    <p contenteditable="true" spellcheck="true">Spellcheck on: There is a tyyypooo here.
+        Did the browser spot it?</p>
+    <label>Yes:
+        <input type="radio" name="yesno" id="yesno" value="yes">
+    </label>
+    <label>No:
+        <input type="radio" name="yesno" id="yesno" value="no">
+    </label>
+    <p title="Hey look I am a title tooltip!">
+        This is the first paragraph of text.
+    </p>
+    <div>
+        Standard text running left to right in most cases.
+        <bdo dir="rtl">Napoleon never really said <q>Able was I ere
+                I saw Elba.</q></bdo> More standard text.
+    </div>
+    <map id="primary" name="primary" style="background-color: red;">
+        <area shape="circle" coords="200,250,25" style="background-color: red;" href="another.html">
+        <area shape="default" style="background-color: red;" nohref>
+    </map>
+    <b>Hello</b>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
+        </p>
+    </blockquote>
+    <table border="1">
+        <caption>Our High-Priced Menu</caption>
+        <tr>
+            <td>Escargot</td>
+            <td>Filet Mignon</td>
+            <td>Big Mac</td>
+        </tr>
+        <tr>
+            <td>Escargot</td>
+            <td>Filet Mignon</td>
+            <td>Big Mac</td>
+            <td>Big Mac</td>
+        </tr>
+    </table>
+    <form action="#" method="get">
+        <p><label>Drinks: <input list="soda"></label></p>
+        <datalist id="soda">
+            <option>Coke</option>
+            <option>Pepsi</option>
+            <option>Dr. Pepper</option>
+            <option>Mr. Pibb</option>
+            <option>Mt. Dew</option>
+            <option>7-Up</option>
+        </datalist>
+    </form>
+    <dl>
+        <dt>Cat</dt>
+        <dd>A domestic animal that likes fish.</dd>
+        <dt>Skunk</dt>
+        <dd>A wild animal that needs deodorant.</dd>
+    </dl>
+    <!-- Terms definitions don't have to pair match -->
+    <dl>
+        <dt>Cat</dt>
+        <dt>Fritz</dt>
+        <dt>Sylvester</dt>
+        <dd>A domestic animal that likes fish.</dd>
+        <dt>Skunk</dt>
+        <dt>Pepe Le Pew</dt>
+        <dd>A wild animal that needs deodorant.</dd>
+        <dt>Tasmanian Devil</dt>
+    </dl>
+    <iframe src="https://www.wikipedia.org/" height="200" width="200" id="chat" sandbox="true">
+    </iframe>
+    <label for="cheese">Do you like cheese?</label>
+    <input type="checkbox" id="cheese" />
+    <ul>
+        <li type="circle">First list item is a circle</li>
+        <li type="square">Second list item is a square</li>
+        <li type="disc">Third list item is a disc</li>
+    </ul>
+    <ol>
+        <li type="i">Roman Numerals</li>
+        <li type="a">Continue list in lowercase letters</li>
+        <li type="a" value="4">Second list item is letter C</li>
+    </ol>
+    <ul type="square">
+        <li>First list item is a circle</li>
+        <li>Second list item is a square</li>
+        <li>Third list item is a disc</li>
+    </ul>
+    <mark style="background-color: rgba(0, 128, 0, 0.43);">progress is being made</mark>.
+    Stay tuned to see more new HTML elements added to your Web documents in
+    the years to come.</p>
+    <marquee behavior="alternate">
+        SPECIAL VALUE !!! This week only !!!
+    </marquee>
+    <marquee id="marquee1" bgcolor="red" direction="right" height="30" width="80%" hspace="10" vspace="10">
+        The super scroller scrolls again!!
+        More fun than a barrel of &lt;BLINK&gt; elements.
+    </marquee>
+    <marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+        <marquee behavior="alternate">This text will bounce</marquee>
+    </marquee>
+    <meter min="0" max="10" low="3" optimum="7" high="9" value="10" title="Captain she can't take much more of this!">
+    </meter>
+    <object type="application/pdf"
+        data="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/DSA_CompleteNotes.pdf" width="250"
+        height="200"></object>
+    <table>
+        <caption>
+            Front-end web developer course 2021
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Person</th>
+                <th scope="col">Most interest in</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Chris</th>
+                <td>HTML tables</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <th scope="row">Dennis</th>
+                <td>Web accessibility</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <th scope="row">Sarah</th>
+                <td>JavaScript frameworks</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <th scope="row">Karen</th>
+                <td>Web performance</td>
+                <td>36</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">Average age</th>
+                <td>33</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+
+</html>
