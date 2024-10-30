@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Window Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Window Object Example</h1>
+    <button onclick="showNavigationInfo()">Show Navigation Info</button>
+    <p id="navigationInfo"></p>
+    <button onclick="showScreenInfo()">Show Screen Info</button>
+    <p id="screenInfo"></p>
+    <button onclick="setTimedMessage()">Set Timed Message</button>
+    <p id="timedMessage"></p>
+    <script>
+        function showNavigationInfo() {
+            const info = `Current Page URL: ${window.location.href} <br>
+                  Hostname: ${window.location.hostname} <br>
+                  Protocol: ${window.location.protocol}`;
+            document.getElementById("navigationInfo").innerHTML = info;
+        }
+        function showScreenInfo() {
+            const screenInfo = `Screen Width: ${window.screen.width}px <br>
+                        Screen Height: ${window.screen.height}px`;
+            document.getElementById("screenInfo").innerHTML = screenInfo;
+        }
+        function setTimedMessage() {
+            document.getElementById("timedMessage").innerHTML = "Message will change in 3 seconds...";
+            setTimeout(function () {
+                document.getElementById("timedMessage").innerHTML = "Changed !!";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

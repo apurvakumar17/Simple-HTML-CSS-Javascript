@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<food_menu>
+    <category>
+        <name>Samosa</name>
+        <price>15</price>
+        <calories>700</calories>
+    </category>
+    <category>
+        <name>Paneer Tikka</name>
+        <price>200</price>
+        <calories>450</calories>
+    </category>
+    <category>
+        <name>Masala Dosa</name>
+        <price>100</price>
+        <calories>350</calories>
+    </category>
+    <category>
+        <name>Chole Bhature</name>
+        <price>70</price>
+        <calories>600</calories>
+    </category>
+    <category>
+        <name>Biryani</name>
+        <price>350/price>
+        <calories>550</calories>
+    </category>
+</food_menu>
