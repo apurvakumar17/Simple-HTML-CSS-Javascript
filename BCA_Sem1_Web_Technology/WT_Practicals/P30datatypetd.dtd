@@ -1,6 +1,0 @@
-<!ELEMENT bookstore (book+)>
-<!ELEMENT book (title, author, price, year)>
-<!ELEMENT title (#PCDATA)>
-<!ELEMENT author (#PCDATA)>
-<!ELEMENT price (#PCDATA)>
-<!ELEMENT year (#PCDATA)>
