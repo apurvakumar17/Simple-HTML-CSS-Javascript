@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+
+<body>
+    <h1 align="center">Maharaja Surajmal Institute</h1>
+    <h3>Fill out the below form :</h3>
+    <form action="submit.php" method="post">
+        <label>
+            Name:
+            <input type="text" name="name" style="margin-top: 12px;">
+        </label>
+        <br>
+        <label>
+            Father's Name:
+            <input type="text" name="father_name" style="margin-top: 12px;">
+        </label>
+        <br>
+        <label>
+            DOB:
+            <input type="date" name="dob" style="margin-top: 12px;">
+        </label>
+        <br>
+        <label>
+            Enrollment No.:
+            <input type="number" name="enrollment_no" style="margin-top: 12px;">
+        </label>
+        <br>
+        Select course:
+        <label><input type="radio" name="course" value="BCA" style="margin-top: 12px;"> B.C.A.</label>
+        <label><input type="radio" name="course" value="BEd" style="margin-top: 12px;"> B.Ed.</label>
+        <label><input type="radio" name="course" value="BEd" style="margin-top: 12px;"> B.Tech.</label>
+        <label><input type="radio" name="course" value="BEd" style="margin-top: 12px;"> B.A.(LLB)</label>
+        <br>
+        <input type="submit" value="Submit" style="margin-top: 12px;">
+    </form>
+</body>
+
+</html>

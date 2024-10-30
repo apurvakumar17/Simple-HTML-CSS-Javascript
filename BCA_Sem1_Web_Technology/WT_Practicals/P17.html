@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Inbuilt Functions</title>
+</head>
+<body>
+    <h2>JavaScript Inbuilt Functions</h2>
+    
+    <script>
+        console.log("Math Functions:");
+        let number = -9.5;
+        console.log(
+            Math.abs(number), 
+            Math.sqrt(16), 
+            Math.pow(2, 3), 
+            Math.random(), 
+            Math.round(4.7)
+        );
+
+        console.log("\nString Functions:");
+        let str = "Hello, World!";
+        console.log(
+            str.length,
+            str.toUpperCase(), 
+            str.toLowerCase(), 
+            str.indexOf("World"), 
+            str.substring(7, 12)
+        );
+
+        console.log("\nArray Functions:");
+        let arr = [10, 20, 30, 40, 50];
+        arr.push(60); 
+        arr.pop(); 
+        arr.reverse();
+        console.log(arr.join(", "));
+
+        console.log("\nDate Functions:");
+        let currentDate = new Date();
+        console.log(
+            currentDate, 
+            currentDate.getFullYear(), 
+            currentDate.getMonth(), 
+            currentDate.getDate(), 
+            currentDate.getHours(), 
+            currentDate.getMinutes()
+        );
+    </script>
+</body>
+</html>
