@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table with Attributes</title>
+    <style>
+        table {
+            width: 80%;
+            height: 300px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 10px;
+        }
+        thead {
+            background-color: #f2f2f2;
+        }
+        tfoot {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table cellpadding="10" cellspacing="5">
+        <thead>
+            <tr>
+                <th rowspan="2">#</th>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Country</th>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Apurva</td>
+                <td>Kumar</td>
+                <td>18</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Anubhav</td>
+                <td>Singh</td>
+                <td>17</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td rowspan="2">Ajit</td>
+                <td rowspan="2">Kumar</td>
+                <td>19</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>79</td>
+                <td>Australia</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total Entries: 4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

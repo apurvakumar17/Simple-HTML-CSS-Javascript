@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change HTML Style with JS</title>
+</head>
+<body>
+    <h1>JavaScript Example: Change Style</h1>
+    <p id="myParagraph" style="color: black; font-size: 16px;">This is a normal paragraph</p>
+    <button onclick="changeStyle()">Change Style</button>
+    <script>
+        function changeStyle() {
+            var paragraph = document.getElementById("myParagraph");
+            paragraph.style.color = "white";
+            paragraph.style.backgroundColor = "blue";
+            paragraph.style.fontSize = "24px";
+            paragraph.style.padding = "10px";
+        }
+    </script>
+</body>
+</html>

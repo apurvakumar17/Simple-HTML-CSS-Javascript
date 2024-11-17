@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Literals</title>
+</head>
+<body>
+    <script>
+        console.log("By Object Literals: ");
+        let car = {
+            make: "Toyota",
+            model: "Corolla",
+            year: 2022,
+        }
+        console.log(`${car.model} made by ${car.make} in ${car.year}`);
+
+        console.log("\nBy Instance of Object Directly: ");
+        let bike = new Object();
+        bike.make = "Yamaha";
+        bike.model = "FZ";
+        bike.year = 2021;
+        console.log(`${bike.model} made by ${bike.make} in ${bike.year}`);
+
+        console.log("\nBy Using Object Constructor: ");
+        function Phone(brand, model, year) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+        }
+        let apple1 = new Phone("Apple", "iPhone 16 Pro Max", 2024);
+        let samsung1 = new Phone("Samsung", "Galaxy S24 Ultra",2024);
+        console.log(`${apple1.model} made by ${apple1.brand} in ${apple1.year}`);
+        console.log(`${samsung1.model} made by ${samsung1.brand} in ${samsung1.year}`);
+    </script>
+</body>
+</html>
