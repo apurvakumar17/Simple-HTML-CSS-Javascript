@@ -1,0 +1,37 @@
+:root {
+    --dark-color: #8a3070; 
+    --light-color: #ffeefe;  
+    --main-color: #ffc1ff; 
+}
+
+.darkfontfill {
+    color: var(--dark-color); /* Use variable */
+}
+
+.darkfill {
+    background-color: var(--dark-color); /* Use variable */
+}
+
+.lightfontfill {
+    color: var(--light-color); /* Use variable */
+}
+
+.lightfill {
+    background-color: var(--light-color); /* Use variable */
+}
+
+.mainfill {
+    background-color: var(--main-color); /* Use variable */
+}
+
+.mainfontfill {
+    color: var(--main-color); /* Use variable */
+}
+
+.mainoutline {
+    outline: 0.6vh solid var(--main-color); /* Use variable */
+}
+
+.darkborder {
+    border-color: var(--dark-color); /* Use variable */
+}

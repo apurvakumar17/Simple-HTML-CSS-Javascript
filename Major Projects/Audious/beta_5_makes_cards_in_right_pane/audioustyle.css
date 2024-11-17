@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'poppins';
+    transition: all 0.1s ease-in-out;
+}
+body{
+    margin:0px;
+}
+.mainbg{
+    /* background-color: rgb(255, 238, 254); */
+    height:100vh;
+    display: flex;
+    z-index: 1;
+}
+.leftpane{
+    width:25vw;
+    height:100%;
+    /* background-color: rgb(255 217 255); */
+    border-top-right-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    box-shadow: 0.5vw 0vw 1.2vw rgba(0, 0, 0, 0.150);
+    z-index: 3;
+}
+.rightpane{
+    width:75vw;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox{
+    height: 8vh;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0px;
+} 
+.searchbox input{
+    border: none;
+    height: 60%;
+    margin-right: 3vw;
+    width: 50vw;
+    border-radius: 100vw;
+    padding-left: 2.5vh;
+    font-size: 2.3vh;
+    box-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.150);
+}
+.searchbox button{
+    border: none;
+    height: 60%;
+    width: 20%;
+    border-radius: 100vw;
+    font-size: 2vh;
+    box-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.150);
+    cursor: pointer;
+}
+
+.searchbox button:active{
+    background-color: rgb(213, 213, 213);
+}
+
+.logos{
+    width:100%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3vw;
+    /* color: #8a3070; */
+    padding-top: 1vw;
+}
+#logoaudious{
+    /* color: #8a3070; */
+    font-size: 3vw;
+}
+
+.logos::selection{
+    background: transparent;
+}
+.player{
+    /* background-color: #8a3070; */
+    height: 11%;
+    width: 50%;
+    position:absolute;
+    bottom:0px;
+    border-radius: 3vh;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.abovebar{
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+}
+#controls{
+    height: 60%;
+    /* color:rgb(255, 219, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#controls span{
+    font-size: 2.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+#controls span:hover{
+    cursor: pointer;
+}
+#controls span:active{
+    color: rgb(212, 212, 212);
+}
+
+
+.seekbar{
+    height:0.4vw;
+    margin:2vw;
+    margin-top: 1vw;
+    margin-bottom: 0.1vw;
+    border-radius: 1vw;
+    width: 90%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/White_square_50%25_transparency.svg/1024px-White_square_50%25_transparency.svg.png");
+    
+}
+.seekbarc{
+    height:0.4vw;
+    width:0%;
+    border-radius: 1vw;
+}
+
+
+
+*::selection{
+    background: transparent;
+}
+.playlistsbox{
+    background-color: rgba(0, 0, 0, 0);
+    height:75%;
+    width:85%;
+    display: block;
+    margin-bottom: 3vw;
+    padding: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.card1{
+    /* background-color: rgb(255, 193, 255); */
+    height:20vw;
+    width: 19vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 0.6vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.songpic1{
+    height: 15vw;
+    width: 16.5vw;
+    margin-top: 1vw;
+    border-radius: 0.5vw;
+    background-size: cover;
+    filter:opacity(50%) ;
+    background-position: center;
+}
+
+.songpicname{
+    font-weight: 500;
+    width: 16vw;
+    font-size: 1.15vw;
+}
+
+*{
+    scrollbar-width:auto;              
+    scrollbar-color: rgba(0, 0, 0, 0.09) rgba(255, 255, 255, 0);    /* Thumb color / Track color */
+}
+#ondevt{
+    height: 10%;
+    /* color: #8a3070; */
+    font-size: 2vw;
+    display: flex;
+    align-items:flex-end;
+    font-weight:500;
+    padding-left: 2vh;
+}
+.ondev{
+    width: 100%;
+    height: 70%;
+    margin-top: 3vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.dcard1{
+    height: 7vw;
+    width:22vw;
+    margin-bottom: 1vh;
+    margin-left: 2vh;
+    border-radius: 3.5vh;
+    border:0.4vh solid #8a307000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.songcard{
+    height: 5.7vw;
+    width: 5.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vh;
+    margin-left: 0.7vw;
+    margin-right: 0.7vw;
+}
+.dc1p{
+    transform: scale(1.5);
+    margin-left: 0.7vw;
+    margin-right: 0.9vw;
+    cursor: pointer;
+}
+.dc1p:active{
+    color: grey;
+}
+.songfilet{
+    font-size:1vw;
+    text-wrap: balance;
+    text-align: left;
+    width:100%;
+    font-weight: 500;
+}
+.songinfo,.songtime{
+    font-size:1vw;
+}
+.songtime{
+    width:8vw;
+}

@@ -1,0 +1,134 @@
+body{
+    margin:0;
+}
+#mainbg{
+    height:100vh ;
+    background-color: rgba(15,15,15,255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card{
+    height: 16vh;
+    border-radius: 1vh;
+    transition: all ease-in 0.2s;
+    display: flex;
+    align-items: center;
+}
+#vcard1:hover,#vcard2:hover,#vcard3:hover,#vcard4:hover,#vcard5:hover,#vcard6:hover{
+    background-color: rgba(39,39,39,255);
+    cursor: pointer;
+}
+.num{
+    height: 100%;
+    width: 4vh;
+    font-family: 'arial';
+    color: rgba(255, 255, 255, 0.789);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+}
+#thumbn1{
+    position: relative;
+    height: 14.5vh;
+    width: 25vh;
+    border-radius: 1vh;
+    background-image: url("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw");
+    background-size: cover;
+    background-color: rgba(158, 158, 158, 0.3);
+}
+#thumbn2{
+    position: relative;
+    height: 14.5vh;
+    width: 25vh;
+    border-radius: 1vh;
+    /* background-image: url("https://i.ytimg.com/vi/HcOc7P5BMi4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCyXdRk4ULTr5iApoX4vCNqHq21Wg"); */
+    background-size: cover;
+    background-color: rgba(158, 158, 158, 0.3);
+}
+#thumbn3{
+    position: relative;
+    height: 14.5vh;
+    width: 25vh;
+    border-radius: 1vh;
+    /* background-image: url("https://i.ytimg.com/vi/ESnrn1kAD4E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB7HXlk_hJ70PoQJS0OYP8xVnBUfQ"); */
+    background-size: cover;
+    background-color: rgba(158, 158, 158, 0.3);
+}
+#thumbn4{
+    position: relative;
+    height: 14.5vh;
+    width: 25vh;
+    border-radius: 1vh;
+    /* background-image: url("https://i.ytimg.com/vi/Ez8F0nW6S-w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdL6h8jJwjs5njXcacIUuKVYdoZA"); */
+    background-size: cover;
+    background-color: rgba(158, 158, 158, 0.3);
+}
+#thumbn5{
+    position: relative;
+    height: 14.5vh;
+    width: 25vh;
+    border-radius: 1vh;
+    /* background-image: url("https://i.ytimg.com/vi/nGhKIC_7Mkk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJu6HhbBWWYns7FzAOSXrevkKy2w"); */
+    background-size: cover;
+    background-color: rgba(158, 158, 158, 0.3);
+}
+#thumbn6{
+    position: relative;
+    height: 14.5vh;
+    width: 25vh;
+    border-radius: 1vh;
+    /* background-image: url("https://www.gstatic.com/youtube/media/ytm/images/pbg/sounds-from-shorts-@384.png"); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(158, 158, 158, 0.3);
+}
+.dotsbutton{
+    background-color: rgb(0,0,0,0);
+    color: white;
+    border:none;
+}
+.dotsbutton span{
+    font-size: 4vh;
+}
+#det1{
+    font-family: 'arial';
+    height: 14.5vh;
+    width: 70vw;
+    margin-left: 1vw;
+}
+#title1{
+    padding-top: 0.5vh;
+    padding-left: 0.5vh;
+    margin-bottom: 2.1vh;
+    width:100%;
+    color:rgba(255, 255, 255, 0.973);
+    font-weight: bold;
+    font-size: 2.1vh;
+    word-wrap: break-word; 
+}
+#subtitle1{
+    padding-left: 0.5vh;
+    width:100%;
+    color: rgba(255, 255, 255, 0.789);
+    font-size: 1.7vh;
+}
+#durationbox{
+    display:flex;
+    padding: 0.33vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width:17%;
+    bottom:0;
+    right:0;
+    margin:0.35vw;
+    border-radius: 0.65vh;
+    color: white;
+    font-family: 'arial';
+    font-size: 77%;
+    font-weight: bold;
+}

@@ -1,0 +1,67 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#mainbg {
+    background-color: rgb(25, 25, 25);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cmain {
+    border: 4px solid grey;
+    height: 70vh;
+    width: 50vh;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+#display {
+    border: 4px solid grey;
+    height: 13vh;
+    width: 45vh;
+    margin: 2vh;
+    border-radius: 2vh;
+    
+}
+#message {
+    color: rgb(186, 186, 186);
+    margin-left: 2vh;
+    margin-right: 2vh;
+    font-weight: bolder;
+    font-family: 'Arial';
+    text-align: right;
+}
+#message > span {
+    cursor: pointer;
+    padding: 0.7vh;
+    border-radius: 0.5vh;
+}
+#message > span:hover {
+    background-color: #555;
+    padding: 0.7vh;
+    border-radius: 0.5vh;
+}
+#keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vh;
+    padding: 2vh;
+    justify-items: center;
+}
+.key {
+    border: 4px solid grey;
+    background-color: rgba(240, 248, 255, 0);
+    color: rgb(186, 186, 186);
+    font-weight: bolder;
+    font-size: 5vh;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    width: 10vh;
+    height: 10vh;
+}
+.key:hover {
+    background-color: #555;
+}

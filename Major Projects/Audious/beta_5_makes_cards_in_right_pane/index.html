@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/9280/9280598.png">
+    <link rel="stylesheet" href="audioustyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="dynamic_colors.css">
+    <title>Audious - Music Streamer</title>
+</head>
+<body>
+    <div class="mainbg lightfill">
+        <div class="leftpane mainfill">
+            <div class="logos darkfontfill">
+                <span class="material-symbols-outlined " id="logoaudious">music_note</span>
+                audious
+            </div>
+            <div id="ondevt" class="darkfontfill">
+                Playable Songs :-
+            </div>
+            <div class="ondev">
+                <!-- <div class="dcard1 darkborder">
+                    <div class="songcard  lightfill">
+                        <span class="material-symbols-outlined darkfontfill" id="logoaudious">music_note</span>
+                    </div>
+                    <p class="darkfontfill songfilet">Song file name</p>
+                    <span class="material-symbols-outlined darkfontfill dc1p">play_circle</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="rightpane">
+            <div class="searchbox">
+                <input id="myInput" type="text" placeholder="Search Song Here..." class="mainoutline">
+                <button class="mainfill mainoutline" onclick="searchSong()">Search</button>
+            </div>
+            <div class="playlistsbox">
+                <!-- <div class="card1 mainfill">
+                    <div class="songpic1" style="background-image:url('https://t3.ftcdn.net/jpg/03/01/43/92/360_F_301439209_vpF837oCGM1lp0cnC7stzCBn3th0dQ6O.jpg')"></div>
+                    <p class="songpicname darkfontfill">Buphesh Kumar Sherawat apurva Kumar</p>
+                </div> -->
+            </div>
+
+
+
+            <div class="player darkfill">
+
+                <div class="abovebar">
+                    <div class="songinfo mainfontfill">Song Name</div>
+                    <div id="controls" class="mainfontfill fill">
+                        <span class="material-symbols-outlined" id="previous">skip_previous</span>
+                        <span class="material-symbols-outlined" id="play" onclick="playpause()">play_circle</span>
+                        <span class="material-symbols-outlined" id="next">skip_next</span>
+                     </div>   
+                    <div class="songtime mainfontfill">00:00 / 00:00</div>
+                </div>
+                <div class="seekbar"><div class="seekbarc lightfill"></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="audiouslogix.js"></script>
+</body>
+</html>

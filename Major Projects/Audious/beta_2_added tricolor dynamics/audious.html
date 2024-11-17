@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/9280/9280598.png">
+    <link rel="stylesheet" href="audioustyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="dynamic_colors.css">
+    <title>Audious - Music Streamer</title>
+</head>
+<body>
+    <div class="mainbg lightfill">
+        <div class="leftpane mainfill">
+            <div class="logos darkfontfill">
+                <span class="material-symbols-outlined " id="logoaudious">music_note</span>
+                audious
+            </div>
+            <div id="ondevt" class="darkfontfill">
+                On device songs :-
+            </div>
+            <div class="ondev">
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+                <div class="dcard1 darkborder"></div>
+            </div>
+        </div>
+        <div class="rightpane">
+            <div class="searchbox">
+                <input type="text" placeholder="Search Song Here..." class="mainoutline">
+                <button class="mainfill mainoutline">Search</button>
+            </div>
+            <div class="playlistsbox">
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+                <div id="card1" class="mainfill"></div>
+            </div>
+            <div class="player darkfill">
+                <div id="controls" class="mainfontfill">
+                    <span class="material-symbols-outlined">skip_previous</span>
+                    <span class="material-symbols-outlined" onclick="playpause()">play_circle</span>
+                    <span class="material-symbols-outlined">skip_next</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="audiouslogix.js"></script>
+</body>
+</html>
