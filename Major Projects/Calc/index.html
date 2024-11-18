@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
+    <link rel = "stylesheet" href = "style.css">
 </head>
-
 <body>
-    <div id="mainbg">
-        <div id="cmain">
-            <div id="display">
-
-            </div>
-            <div id="message"><span>CLEAR</span></div>
-            <div id="keypad">
-                <button class="key">7</button>
-                <button class="key">8</button>
-                <button class="key">9</button>
-                <button class="key">/</button>
-                <button class="key">4</button>
-                <button class="key">5</button>
-                <button class="key">6</button>
-                <button class="key">*</button>
-                <button class="key">1</button>
-                <button class="key">2</button>
-                <button class="key">3</button>
-                <button class="key">-</button>
-                <button class="key">0</button>
-                <button class="key">.</button>
-                <button class="key">=</button>
-                <button class="key">+</button>
-            </div>
+    <div id="calculator">
+        <input type="text" placeholder = "0" id="inputbox">
+        <div id="btn">
+            <button class="operator" id="ac" onclick="allclear()">AC</button>
+            <button class="operator" onclick="del()">DEL</button>
+            <button class="operator" onclick="exp('%')">%</button>
+            <button class="operator" onclick="exp('/')">/</button>
+        </div>
+        <div id="btn">
+            <button onclick="exp('7')">7</button>
+            <button onclick="exp('8')">8</button>
+            <button onclick="exp('9')">9</button>
+            <button class="operator" onclick="exp('*')">*</button>
+        </div>
+        <div id="btn">
+            <button onclick="exp('4')">4</button>
+            <button onclick="exp('5')">5</button>
+            <button onclick="exp('6')">6</button>
+            <button class="operator" onclick="exp('-')">-</button>
+        </div>
+        <div id="btn">
+            <button onclick="exp('1')">1</button>
+            <button onclick="exp('2')">2</button>
+            <button onclick="exp('3')">3</button>
+            <button class="operator" onclick="exp('+')">+</button>
+        </div>
+        <div id="btn">
+            <button onclick="exp('00')">00</button>
+            <button onclick="exp('0')">0</button>
+            <button onclick="exp('.')">.</button>
+            <button id="equal" onclick="result()">=</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
