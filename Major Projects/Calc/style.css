@@ -5,6 +5,18 @@
     font-family: 'Poppins';
     transition: all ease-in-out 0.05s;
 }
+#back {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    background-color:#191208;
+    padding-left: 1.5vh;
+    padding-right: 2vh;
+    font-size: 3.5vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    color: #fae0bf;
+}
 #calculator {
     padding: 5vh;
     border-radius: 3vh;

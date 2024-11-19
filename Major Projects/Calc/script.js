@@ -1,17 +1,27 @@
 let input = document.getElementById('inputbox');
-let expression ="";
+let expression = "";
+
 function exp(value) {
-    expression = expression + value;
+    expression += value;
     input.value = expression;
 }
+
 function result() {
-    input.value = eval(expression);
+    try {
+        expression = eval(expression).toString(); 
+        input.value = expression;
+    } catch (error) {
+        input.value = "Error";
+        expression = "";
+    }
 }
+
 function allclear() {
     input.value = "";
     expression = "";
 }
+
 function del() {
-    expression = expression.slice(0,-1);
-    input.value = expression;
+    expression = expression.slice(0, -1); 
+    input.value = expression; 
 }
