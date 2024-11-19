@@ -27,12 +27,12 @@
     --light-color: #ffffee;  
     --main-color: #fffdc1; 
 }
-
+ */
  :root {
     --dark-color: #5e308a; 
     --light-color: #f7eeff;  
     --main-color: #e5c1ff; 
-} */
+}
 
 .darkfontfill {
     color: var(--dark-color);  
