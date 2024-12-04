@@ -1,0 +1,14 @@
+* {
+    transition: all 0.3s ease-in-out;
+}
+.newbox {
+    background-color: aquamarine;
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+    margin-bottom: 2px;
+}
+.newclass {
+    border-radius: 14px;
+    text-align: center;
+}
