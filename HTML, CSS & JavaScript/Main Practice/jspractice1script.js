@@ -71,7 +71,14 @@ function add_element() {
     let btn = document.createElement("button");
     btn.innerText = "Click me to add a new class to all boxes";
     btn.addEventListener("click", add_class);
-    new_box.append(btn);
+    new_box.appendChild(btn);
+
+    let btn2 = document.createElement("button");
+    btn2.innerText = "-----Click here to delete me!-----";
+    btn2.addEventListener("click", function () {
+        delete_element(this);
+    });
+    new_box.appendChild(btn2);
 
     x.appendChild(new_box);
 }
@@ -81,4 +88,16 @@ function add_class() {
     for (let x of divs) {
         x.classList.add("newclass");
     }
+}
+
+let mainbutton = document.getElementById("mainbtn");
+mainbutton.onmouseover = () => {
+    mainbutton.style.backgroundColor = "dodgerblue";
+};
+mainbutton.onmouseout = () => {
+    mainbutton.style.backgroundColor = "";
+};
+
+function delete_element(element) {
+    element.parentNode.remove(); // Removes the entire parent element (newbox)
 }
