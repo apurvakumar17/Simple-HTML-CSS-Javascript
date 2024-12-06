@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="/icons/Weather_iOS_15.webp">
+	<title>Weather App</title>
+</head>
+<body onload="fetchWeather()">
+	<div id="maincard">
+		<div id="searchbar">
+			<input type="text" id="searchbox">
+			<div onclick="fetchWeather()" id="searchiconparent">
+				<img src="/icons/Search Icon.png" id="searchicon">
+			</div>
+		</div>
+		<div id="weathericon">
+			<!-- <img src="//cdn.weatherapi.com/weather/128x128/day/113.png" alt=""> -->
+			<img id="weatherimg" src="/icons/113.webp">
+			<p id="weathercon">Sunny</p>
+		</div>
+		<div id="temprature">
+			<span id="tnum">24</span>
+			<span id="degc">&degC</span>
+		</div>
+		<div id="winhu">
+			<div id="wind">
+				<img class="winhuicon" src="/icons/Wind Icon.png">
+				<p id="windnum">10.4 Km/h</p>
+			</div>
+			<div id="humidity">
+				<img class="winhuicon" src="/icons/Humidity Icon.png">
+				<p id="humiditynum">50 %</p>
+			</div>
+			<div id="airquality">
+				<img class="winhuicon" src="/icons/Aqi Icon.png">
+				<p id="aqinum">AQI: 170</p>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
