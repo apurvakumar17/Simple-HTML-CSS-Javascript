@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Google Sans';
+    height: 90vh;
+}
+button {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background-color: cyan;
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan;
+    transition: all 0.3s ease;
+}
+button:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
