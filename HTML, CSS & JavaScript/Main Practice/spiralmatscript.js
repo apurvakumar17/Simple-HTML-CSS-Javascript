@@ -1,6 +1,6 @@
 let container = document.body;
-let rows = 7;
-let columns = 13;
+let rows = Math.floor(window.innerHeight / 50);
+let columns = Math.floor(window.innerWidth / 50);
 
 //-----------Create boxes for grid--------------//
 for (let i = 1; i <= rows; i++) {
