@@ -1,0 +1,22 @@
+* {
+    transition:all 1s ease;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 0.5fr));
+    /* grid-template-columns: repeat(auto-fit, 1fr); */
+    /* grid-template-rows: repeat(auto-fit, 1fr); */
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #429d31; */
+    border: 0.1vw solid #ffffff;
+    color: white;
+    font-size: 1.5rem;
+}
