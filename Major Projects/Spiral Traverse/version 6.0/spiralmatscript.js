@@ -291,7 +291,7 @@ function traverseOptions(event) {
                     let str = document.getElementById("op1").innerText;
                     str = str.replace("Sprl", "");
                     nt = parseInt(str);
-                    if (nt - 1 > 0) {
+                    if (nt - 1 > 1) {
                         document.getElementById("op1").innerText = "Sprl" + (nt - 1);
                     } else {
                         document.getElementById("op1").innerText = "Spiral";
