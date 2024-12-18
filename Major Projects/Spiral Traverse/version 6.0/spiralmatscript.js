@@ -14,9 +14,11 @@ function shuffleColor() {
 let container = document.body;
 
 
-document.addEventListener("keydown", traverseOptions);
+document.addEventListener("keydown", traverseOptions); //For opening menu box
 
-let optionShown = 0;
+let optionShown = 0; //Menu not shown
+
+//------Calculate rows and columns------------//
 const rows = Math.floor(window.innerHeight / 50);
 const columns = Math.floor(window.innerWidth / 50);
 
@@ -34,7 +36,7 @@ for (let i = 1; i <= rows; i++) {
     }
 }
 
-//----------------------Initialize boundaries------------------//
+//----Initialize boundaries----//
 let leftBound = 1;
 let rightBound = columns;
 let topBound = 1;
@@ -143,7 +145,7 @@ function traverseOptions(event) {
         /*color = shuffleColor();*/
         if (optionShown === 0) {
 
-            //------Opens Main Menu------//
+            //------Menu elements------//
             let option = document.createElement("div");//Main Menu Background
             option.setAttribute("id", "mainmenu");
 
@@ -177,6 +179,7 @@ function traverseOptions(event) {
             ar2.setAttribute("id", "ar2");
             ar2.innerHTML = "&#9660";
 
+            //-----Add elements to DOM-----//
             document.body.appendChild(op1);
             document.body.appendChild(op2);
             document.body.appendChild(op3);
@@ -185,6 +188,7 @@ function traverseOptions(event) {
             document.body.appendChild(ar2);
             document.body.appendChild(option);
 
+            //-----Position the menu elemnts to correct place-----//
             document.getElementById("op1").style.gridArea = `
                 ${Math.floor((rows - 5) / 2) + 2} / 
                 ${Math.floor((columns - 6) / 2) + 2} / 
@@ -299,9 +303,9 @@ function traverseOptions(event) {
                 }
             });
 
-            optionShown = 1;
+            optionShown = 1; //Now menu is hown
         } else {
-            closeMenu();
+            closeMenu(); //If its open it closes
         }
     }
 }
