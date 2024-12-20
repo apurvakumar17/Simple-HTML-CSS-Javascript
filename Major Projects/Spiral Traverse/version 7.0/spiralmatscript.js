@@ -63,6 +63,7 @@ let optionShown = 0; //Menu not shown
 
 document.addEventListener("keydown", traverseOptions); //For opening menu box
 
+let resizeTimer; //For resizing the grid
 //----genarate the grid dynamically-----//
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
