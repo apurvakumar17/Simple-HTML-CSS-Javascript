@@ -213,20 +213,39 @@ function spiralTraverse(n, mode) {
 function wipeTraverse() {
 
     let timer = 1;
-    clearAllTimeouts();
 
     for (let i = 1; i <= rows; i++) {
         for (let j = 1; j <= columns; j++) {
             let sbox = document.getElementById(`${i}-${j}`);
             sid = setTimeout(() => {
                 sbox.style.backgroundColor = "white";
-            }, timer * 50);
+            }, timer * 100);
             timeouts.push(sid);
         }
         timer++;
     }
 }
 
+function rainTraverse() {
+    timerStart = [];
+    rainLinesColors = [];
+    for (let i = 1; i <= columns; i++) {
+        timerStart.push(Math.random() * 20);
+        rainLinesColors.push(shuffleColor());
+    }
+    for (let i = 1; i <= columns; i++) {
+        for (let j = 1; j <= rows; j++) {
+            let sbox = document.getElementById(`${j}-${i}`);
+            const delay = timerStart[i - 1] * 50 + (j - 1) * 50;
+            const sid = setTimeout(() => {
+                sbox.style.backgroundColor = rainLinesColors[i - 1];
+            }, delay);
+
+            timeouts.push(sid);
+        }
+        timerStart[i - 1]++;
+    }
+}
 
 //-----------------------------Main menu options-----------------------------//
 function traverseOptions(event) {
@@ -242,9 +261,10 @@ function traverseOptions(event) {
             //------Create Menu Elements------//
             let option = createBoxElement("box", "mainmenu", "");
             let op1 = createBoxElement("ops", "op1", "Spiral");
-            let op2 = createBoxElement("ops", "op2", "Silver Glitter");
+            let op2 = createBoxElement("ops", "op2", "Wipe");
             let op3 = createBoxElement("ops", "op3", "Disco");
             let op4 = createBoxElement("ops", "op4", "Charm");
+            let op5 = createBoxElement("ops", "op5", "Rain")
             let ar1 = createBoxElement("ops", "ar1", "&#9650");
             let ar2 = createBoxElement("ops", "ar2", "&#9660");
             let b1 = createBoxElement("ops", "b1", "&#10074;&#10074;");
@@ -258,9 +278,10 @@ function traverseOptions(event) {
 
             const elements = [
                 { id: "op1", area: [2, 2, 3, 4] },
-                { id: "op2", area: [3, 2, 4, 6] },
+                { id: "op2", area: [3, 2, 4, 4] },
                 { id: "op3", area: [4, 2, 5, 4] },
                 { id: "op4", area: [4, 4, 5, 6] },
+                { id: "op5", area: [3, 4, 4, 6]},
                 { id: "mainmenu", area: [1, 1, 6, 7] },
                 { id: "ar1", area: [2, 4, 3, 5] },
                 { id: "ar2", area: [2, 5, 3, 6] },
@@ -290,11 +311,12 @@ function traverseOptions(event) {
                 closeMenu();
             });
 
-            //-----------Functionality of Silver Glitter Mode button(#op2)---------------//
+            //-----------Functionality of Wipe button(#op2)---------------//
             document.getElementById("op2").addEventListener("click", () => {
                 clearAllTimeouts();
                 closeMenu();
-                spiralTraverse(1, "SILVER GLITTER");
+                wipeTraverse();
+                // spiralTraverse(1, "SILVER GLITTER");
             });
 
             //-----------Functionality of Disco Mode button(#op3)---------------//
@@ -325,6 +347,12 @@ function traverseOptions(event) {
                 }
             });
 
+            //-----------Functionality of Rain button(#op5)---------------------//
+            document.getElementById("op5").addEventListener("click", () => {
+                clearAllTimeouts();
+                closeMenu();
+                rainTraverse();
+            });
             //-----------Functionality of Arrow Up------------//
             document.getElementById("ar1").addEventListener("click", () => {
                 if (document.getElementById("op1").innerText === "Spiral") {
@@ -375,6 +403,7 @@ function closeMenu() {
     document.getElementById("op2").remove();
     document.getElementById("op3").remove();
     document.getElementById("op4").remove();
+    document.getElementById("op5").remove();
     document.getElementById("ar1").remove();
     document.getElementById("ar2").remove();
     document.getElementById("b1").remove();
