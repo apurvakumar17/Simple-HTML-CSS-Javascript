@@ -210,7 +210,22 @@ function spiralTraverse(n, mode) {
     }
 }
 
+function wipeTraverse() {
 
+    let timer = 1;
+    clearAllTimeouts();
+
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= columns; j++) {
+            let sbox = document.getElementById(`${i}-${j}`);
+            sid = setTimeout(() => {
+                sbox.style.backgroundColor = "white";
+            }, timer * 50);
+            timeouts.push(sid);
+        }
+        timer++;
+    }
+}
 
 
 //-----------------------------Main menu options-----------------------------//
