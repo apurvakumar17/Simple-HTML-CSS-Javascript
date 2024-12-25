@@ -28,7 +28,7 @@ function shuffleColor() {
 
 //--------Set Timeout Ids---------//
 timeouts = [];
-let sid = setTimeout(() => {console.log("Gotcha !")},100);
+let sid = setTimeout(() => { console.log("Gotcha !") }, 100);
 
 //-------clear timeouts-------//
 function clearAllTimeouts() {
@@ -69,7 +69,7 @@ function generateGrid() {
     topBound = 1;
     bottomBound = rows;
 
-    spiralTraverse(1,'NORMAL');
+    spiralTraverse(1, 'NORMAL');
 }
 
 //-------------Element Creator----------------//
@@ -98,7 +98,7 @@ window.addEventListener("resize", () => {
         clearAllTimeouts();
         generateGrid();
         optionShown = 0;
-    }, 200); 
+    }, 200);
 });
 
 
@@ -227,23 +227,17 @@ function wipeTraverse() {
 }
 
 function rainTraverse() {
-    timerStart = [];
-    rainLinesColors = [];
-    for (let i = 1; i <= columns; i++) {
-        timerStart.push(Math.random() * 20);
-        rainLinesColors.push(shuffleColor());
-    }
-    for (let i = 1; i <= columns; i++) {
-        for (let j = 1; j <= rows; j++) {
-            let sbox = document.getElementById(`${j}-${i}`);
-            const delay = timerStart[i - 1] * 50 + (j - 1) * 50;
+    let rainColor = shuffleColor();
+    let rainTimer = 1;
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= columns; j++) {
+            let sbox = document.getElementById(`${i}-${j}`);
             const sid = setTimeout(() => {
-                sbox.style.backgroundColor = rainLinesColors[i - 1];
-            }, delay);
-
+                sbox.style.backgroundColor = rainColor;
+            }, rainTimer * 100);
             timeouts.push(sid);
         }
-        timerStart[i - 1]++;
+        rainTimer++;
     }
 }
 
@@ -256,7 +250,7 @@ function traverseOptions(event) {
 
         /*color = shuffleColor();*/
         if (optionShown === 0) {
-            
+
 
             //------Create Menu Elements------//
             let option = createBoxElement("box", "mainmenu", "");
@@ -270,9 +264,9 @@ function traverseOptions(event) {
             let b1 = createBoxElement("ops", "b1", "&#10074;&#10074;");
 
 
-            
+
             //-----Position the menu elemnts to correct place-----//
-            
+
             let baseRow = Math.floor((rows - 5) / 2);
             let baseCol = Math.floor((columns - 6) / 2);
 
@@ -281,13 +275,13 @@ function traverseOptions(event) {
                 { id: "op2", area: [3, 2, 4, 4] },
                 { id: "op3", area: [4, 2, 5, 4] },
                 { id: "op4", area: [4, 4, 5, 6] },
-                { id: "op5", area: [3, 4, 4, 6]},
+                { id: "op5", area: [3, 4, 4, 6] },
                 { id: "mainmenu", area: [1, 1, 6, 7] },
                 { id: "ar1", area: [2, 4, 3, 5] },
                 { id: "ar2", area: [2, 5, 3, 6] },
                 { id: "b1", area: [1, 1, 2, 2] },
             ];
-            
+
             elements.forEach(({ id, area }) => {
                 const element = document.getElementById(id);
                 if (element) {
@@ -351,7 +345,14 @@ function traverseOptions(event) {
             document.getElementById("op5").addEventListener("click", () => {
                 clearAllTimeouts();
                 closeMenu();
-                rainTraverse();
+                let rainTime = 1;
+                while (rainTime * 500 !== 30000) {
+                    sid = setTimeout(() => {
+                        rainTraverse();
+                    }, rainTime * 500);
+                    rainTime++;
+                    timeouts.push(sid);
+                }
             });
             //-----------Functionality of Arrow Up------------//
             document.getElementById("ar1").addEventListener("click", () => {
