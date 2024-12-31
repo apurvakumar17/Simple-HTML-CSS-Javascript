@@ -207,11 +207,6 @@ function spiralTraverse(n, mode) {
         topBound = 1;
         bottomBound = rows;
     }
-
-    sid = setTimeout(() => {
-        timeouts = [];
-    }, timer * 50);
-    timeouts.push(sid);
 }
 
 
@@ -233,10 +228,6 @@ function rainTraverse(mode) {
         }
         rainTimer++;
     }
-    sid = setTimeout(() => {
-        timeouts = [];
-    }, rainTimer * 100);
-    timeouts.push(sid);
 }
 
 //-----------------------------Main menu options-----------------------------//
