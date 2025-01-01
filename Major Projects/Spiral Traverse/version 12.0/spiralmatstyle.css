@@ -25,13 +25,15 @@ body {
     /* transition: background-color 0.5s ease; */
 }
 #mainmenu {
-    background-color: #429d31;
+    /*background-color: #429d31;*/
+    background: linear-gradient(135deg, #00a02d, #017a07);
     /* grid-area: 7 / 11 / 10 / 17; */
     z-index: 1;
     border: 0.1vw solid #ffffff;
 }
 .ops {
-    background-color: #5ecf4a;
+    /*background-color: #5ecf4a;*/
+    background-color: #5ecf4a59;
     z-index: 2;
     border: 0.15vw solid #ffffff;
     display: flex;
@@ -45,7 +47,7 @@ body {
 }
 .ops:hover {
     cursor: pointer;
-    background-color: #58c544;
+    background-color: #70ff5759;
 }
 .ops:active {
     background-color: #51b140;

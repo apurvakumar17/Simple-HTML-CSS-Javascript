@@ -230,6 +230,34 @@ function rainTraverse(mode) {
     }
 }
 
+
+function grapTraverse() {
+    let rainColor1 = shuffleColor();
+    let rainColor2 = shuffleColor();
+    let rainTimer = 1;
+
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= columns; j++) {
+            if (j % 2 == 0) {
+                let sbox = document.getElementById(`${i}-${j}`);
+                sid = setTimeout(() => {
+                    sbox.style.backgroundColor = rainColor1;
+                }, rainTimer * 100);
+                timeouts.push(sid);
+            } else {
+                let sbox = document.getElementById(`${rows + 1 - i}-${j}`);
+                sid = setTimeout(() => {
+                    sbox.style.backgroundColor = rainColor2;
+                }, rainTimer * 100);
+                timeouts.push(sid);
+            }
+
+        }
+        rainTimer++;
+    }
+}
+
+
 //-----------------------------Main menu options-----------------------------//
 function traverseOptions(event) {
 
@@ -244,17 +272,19 @@ function traverseOptions(event) {
             //------Create Menu Elements------//
             let option = createBoxElement("box", "mainmenu", "");
             let op1 = createBoxElement("ops", "op1", "Spiral");
-            let op2 = createBoxElement("ops", "op2", "Wipe");
+            let op2 = createBoxElement("ops", "op2", "Grap");
             let op3 = createBoxElement("ops", "op3", "Disco");
             let op4 = createBoxElement("ops", "op4", "Charm");
-            let op5 = createBoxElement("ops", "op5", "Rain")
+            let op5 = createBoxElement("ops", "op5", "Rain");
             let ar1 = createBoxElement("ops", "ar1", "&#9650");
             let ar2 = createBoxElement("ops", "ar2", "&#9660");
             let b1 = createBoxElement("ops", "b1", "&#10074;&#10074;");
+            let b2 = createBoxElement("ops", "b2", "&ddarr;");
 
 
 
-            //-----Position the menu elemnts to correct place-----//
+
+            //-----Position the menu elements to correct place-----//
 
             let baseRow = Math.floor((rows - 5) / 2);
             let baseCol = Math.floor((columns - 6) / 2);
@@ -269,6 +299,7 @@ function traverseOptions(event) {
                 { id: "ar1", area: [2, 4, 3, 5] },
                 { id: "ar2", area: [2, 5, 3, 6] },
                 { id: "b1", area: [1, 1, 2, 2] },
+                { id: "b2", area: [5, 1, 6, 2] },
             ];
 
             elements.forEach(({ id, area }) => {
@@ -294,11 +325,11 @@ function traverseOptions(event) {
                 closeMenu();
             });
 
-            //-----------Functionality of Wipe button(#op2)---------------//
+            //-----------Functionality of Grap button(#op2)---------------//
             document.getElementById("op2").addEventListener("click", () => {
                 clearAllTimeouts();
                 closeMenu();
-                rainTraverse("wipe");
+                grapTraverse();
                 // spiralTraverse(1, "SILVER GLITTER");
             });
 
@@ -343,6 +374,8 @@ function traverseOptions(event) {
                     timeouts.push(sid);
                 }
             });
+
+
             //-----------Functionality of Arrow Up------------//
             document.getElementById("ar1").addEventListener("click", () => {
                 if (document.getElementById("op1").innerText === "Spiral") {
@@ -377,9 +410,12 @@ function traverseOptions(event) {
                 closeMenu();
             });
 
-            if (timeouts.length === 0) {
-                document.getElementById("b1").remove();
-            }
+            //------------Functionality of Board Wipe Button-------------//
+            document.getElementById("b2").addEventListener("click", () => {
+                clearAllTimeouts();
+                closeMenu();
+                rainTraverse("wipe");
+            });
 
             optionShown = 1; //Now menu is hown
         } else {
@@ -389,6 +425,7 @@ function traverseOptions(event) {
 }
 
 /*Grey Shades = #999999, #A4A4A4, #AFAFAF, #BABABA, #C4C4C4, #CFCFCF, #DBDBDB, #E6E6E6*/
+
 
 //----------Close Menu Function----------//
 function closeMenu() {
@@ -400,9 +437,7 @@ function closeMenu() {
     document.getElementById("op5").remove();
     document.getElementById("ar1").remove();
     document.getElementById("ar2").remove();
-    if (document.getElementById("b1") !== null) {
-        document.getElementById("b1").remove();
-    }
+    document.getElementById("b1").remove();
+    document.getElementById("b2").remove();
     optionShown = 0;
 }
-
