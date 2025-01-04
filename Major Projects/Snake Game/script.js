@@ -3,12 +3,80 @@ let container = document.body;
 let snakeHeading = "N";
 let fruitX;
 let fruitY;
-
+let tickInterval;
+let score = 0;
+let toggleTurnKeyListener1 = 0;
 
 //------Calculate rows and columns------------//
 let rows = Math.floor(window.innerHeight / 35);
 let columns = Math.floor(window.innerWidth / 35);
 
+function toggleTurnKeyListener() {
+    if (toggleTurnKeyListener1 === 0) {
+        document.addEventListener("keydown", turn);
+        toggleTurnKeyListener1 = 1;
+    } else {
+        document.removeEventListener("keydown", turn);
+        toggleTurnKeyListener1 = 0;
+    }
+}
+toggleTurnKeyListener();
+
+function gameEndMenu() {
+    let baseRow = Math.floor((rows - 5) / 2);
+    let baseCol = Math.floor((columns - 6) / 2);
+
+    let mm = document.createElement("div");
+    mm.setAttribute("id", "mainmenu");
+    mm.style.gridArea = `${baseRow} / ${baseCol} / ${baseRow + 7} / ${baseCol + 8}`
+
+    let msg1 = document.createElement("div");
+    msg1.innerText = "Game Over !!";
+    msg1.setAttribute("id", "gameovermsg");
+    msg1.style.gridArea = `${baseRow + 1} / ${baseCol + 1} / ${baseRow + 3} / ${baseCol + 7}`
+
+    let res1 = document.createElement("div");
+    res1.addEventListener("click", generateGrid);
+    res1.setAttribute("id", "restartbtn");
+    res1.innerHTML = "<span id='res'>Restart &orarr;</span>"
+    res1.style.gridArea = `${baseRow + 4} / ${baseCol + 1} / ${baseRow + 6} / ${baseCol + 7}`
+
+    container.append(mm);
+    container.append(msg1);
+    container.append(res1);
+    toggleTurnKeyListener();
+    snakeHeading = "N";
+    score = 0;
+}
+
+function createScoreBoard() {
+    let scoreBoard = document.createElement("div");
+    scoreBoard.setAttribute("id", "scorebox");
+    scoreBoard.style.gridArea = `${2} / ${2} / ${3} / ${4}`;
+    container.appendChild(scoreBoard);
+}
+
+function updateScore() {
+    let sb = document.getElementById("scorebox");
+    sb.innerText = score;
+}
+
+function spawnHead() {
+    if ((document.getElementById("snakeHead"))) {
+        document.getElementById("snakeHead").remove();
+    }
+    let s1 = document.createElement("div");
+    s1.setAttribute("id", "snakeHead");
+    let x = Math.round(rows / 2);
+    let y = Math.round(columns / 2);
+    s1.style.gridArea = `${x} / ${y} / ${x + 1} / ${y + 1}`;
+    container.appendChild(s1);
+}
+
+
+function startMoving() {
+    tickInterval = setInterval(ticker, 300);
+}
 
 function generateGrid() {
     // Clear existing grid
@@ -30,25 +98,14 @@ function generateGrid() {
         }
     }
 
-
-    let s1 = document.createElement("div");
-    s1.setAttribute("id", "snakeHead");
-    let x = Math.round(columns / 2);
-    let y = Math.round(rows / 2);
-    s1.style.gridArea = `${x} / ${y} / ${x + 1} / ${y + 1}`;
-    container.appendChild(s1);
-
+    spawnHead();
+    createScoreBoard();
     createFruit();
-
-    // Update global boundaries
-    leftBound = 1;
-    rightBound = columns;
-    topBound = 1;
-    bottomBound = rows;
+    startMoving();
+    updateScore();
 }
 
 generateGrid();
-
 
 
 let resizeTimer; //For resizing the grid
@@ -64,7 +121,7 @@ window.addEventListener("resize", () => {
 //-------------------------------------------------------------------------------//
 
 
-document.addEventListener("keydown", turn);
+
 let g1;
 function turn(event) {
     let move = document.getElementById("snakeHead");
@@ -89,6 +146,7 @@ function turn(event) {
     }
     move.style.gridArea = `${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`;
     checkFood();
+    checkOutBound();
 }
 
 
@@ -103,7 +161,7 @@ function createFruit() {
     container.appendChild(fruit);
 }
 
-let tickInterval = setInterval(ticker, 300);
+
 
 function ticker() {
     let m1 = document.getElementById("snakeHead");
@@ -124,6 +182,7 @@ function ticker() {
     }
     m1.style.gridArea = `${grid1[0]} / ${grid1[1]} / ${grid1[2]} / ${grid1[3]}`;
     checkFood();
+    checkOutBound();
 }
 
 function checkFood() {
@@ -132,5 +191,27 @@ function checkFood() {
     if (sHead.style.gridArea === redFruit.style.gridArea) {
         redFruit.remove();
         createFruit();
+        score++;
+        updateScore();
     }
+
 }
+
+function checkOutBound() {
+    let sHead = document.getElementById("snakeHead");
+    let posS = sHead.style.gridArea.split("/").map(Number);
+    // console.log(posS);
+    if (posS[0] === 1 & posS[2] === 2) {
+        clearInterval(tickInterval);
+        gameEndMenu();
+    } else if (posS[1] === 1 & posS[3] === 2) {
+        clearInterval(tickInterval);
+        gameEndMenu();
+    } else if (posS[1] === columns & posS[3] === columns + 1) {
+        clearInterval(tickInterval);
+        gameEndMenu();
+    } else if (posS[0] === rows & posS[2] === rows + 1) {
+        clearInterval(tickInterval);
+        gameEndMenu();
+    }
+} 

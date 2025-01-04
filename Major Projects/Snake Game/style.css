@@ -1,6 +1,6 @@
-* {
-    transition: all 1s ease;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 body {
     margin: 0;
     height: 100vh;
@@ -8,6 +8,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35px, 0.5fr));
     grid-template-rows: repeat(auto-fit, minmax(35px, 0.5fr));
+    transition: all 1s ease;
 }
 .box {
     display: flex;
@@ -18,11 +19,76 @@ body {
     color: white;
     font-size: 1rem;
     font-family: 'Arial';
+    z-index: -5;
     /* transition: background-color 0.5s ease; */
 }
 #snakeHead {
     background-color: rgb(127, 255, 127);
+    z-index: 1;
 }
 #fruit {
-    background-color: red;
+    /* background-color: red; */
+    background-image: url("fruit.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+#scorebox {
+    background-color: rgb(208, 208, 208);
+    color: #1b1b1b;
+    text-align: center;
+    font-family: 'Rubik';
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mainmenu {
+    background-color: aquamarine;
+}
+#gameovermsg {
+    color: #1b1b1b;
+    text-align: center;
+    font-family: 'Rubik';
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: rgb(6, 223, 150);
+    box-shadow: 0px 0px 15px rgb(6, 223, 150);
+}
+#restartbtn {
+    background-color: rgb(7, 189, 128);
+    z-index: 3;
+    border: 0.3rem solid rgb(4, 133, 90);
+    border-top: 0.3rem solid rgb(6, 223, 150);
+    border-left: 0.3rem solid rgb(6, 223, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #restartbtn:hover {
+    background-color: rgb(6, 176, 119);
+    border: 0.3rem solid rgb(6, 223, 150);
+    border-top: 0.3rem solid rgb(4, 133, 90);
+    border-left: 0.3rem solid rgb(4, 133, 90);
+} */
+#restartbtn:hover {
+    cursor: pointer;
+}
+#restartbtn:active {
+    background-color: rgb(6, 176, 119);
+    border: 0.3rem solid rgb(6, 223, 150);
+    border-top: 0.3rem solid rgb(4, 133, 90);
+    border-left: 0.3rem solid rgb(4, 133, 90);
+}
+
+#res {
+    color: #1b1b1b;
+    text-align: center;
+    font-family: 'Rubik';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
