@@ -23,6 +23,10 @@ body {
     /* transition: background-color 0.5s ease; */
 }
 #snakeHead {
+    background-color: rgb(77, 167, 77);
+    z-index: 1;
+}
+.snakeBody {
     background-color: rgb(127, 255, 127);
     z-index: 1;
 }

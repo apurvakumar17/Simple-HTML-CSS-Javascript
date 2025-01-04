@@ -6,10 +6,15 @@ let fruitY;
 let tickInterval;
 let score = 0;
 let toggleTurnKeyListener1 = 0;
+// let trailLength = 1;
+let trail = [];
 
 //------Calculate rows and columns------------//
 let rows = Math.floor(window.innerHeight / 35);
 let columns = Math.floor(window.innerWidth / 35);
+
+
+
 
 function toggleTurnKeyListener() {
     if (toggleTurnKeyListener1 === 0) {
@@ -71,6 +76,7 @@ function spawnHead() {
     let y = Math.round(columns / 2);
     s1.style.gridArea = `${x} / ${y} / ${x + 1} / ${y + 1}`;
     container.appendChild(s1);
+    trail.push(`${x} / ${y} / ${x + 1} / ${y + 1}`);
 }
 
 
@@ -103,6 +109,12 @@ function generateGrid() {
     createFruit();
     startMoving();
     updateScore();
+    checkOutBound();
+    if (toggleTurnKeyListener1 === 0) {
+        toggleTurnKeyListener();
+    }
+    trail = [];
+    trail.push(document.getElementById("snakeHead").style.gridArea);
 }
 
 generateGrid();
@@ -114,6 +126,8 @@ window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
         generateGrid();
+        rows = Math.floor(window.innerHeight / 35);
+        columns = Math.floor(window.innerWidth / 35);
     }, 200);
 });
 
@@ -145,7 +159,11 @@ function turn(event) {
         snakeHeading = "S";
     }
     move.style.gridArea = `${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`;
-    checkFood();
+    trail.push(`${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`);
+    let cf = checkFood();
+    if (!cf) {
+        trail.shift();
+    }
     checkOutBound();
 }
 
@@ -181,7 +199,25 @@ function ticker() {
         grid1[3] -= 1;
     }
     m1.style.gridArea = `${grid1[0]} / ${grid1[1]} / ${grid1[2]} / ${grid1[3]}`;
-    checkFood();
+    trail.push(`${grid1[0]} / ${grid1[1]} / ${grid1[2]} / ${grid1[3]}`);
+    let cf = checkFood();
+    if (!cf) {
+        trail.shift();
+    }
+    console.log(trail);
+    if (document.getElementsByClassName("snakeBody").length > 0) {
+        let delsnakebody = document.getElementsByClassName("snakeBody");
+        while (delsnakebody.length > 0) {
+            delsnakebody[0].remove();
+        }
+    }
+    for (let i = 0; i < trail.length - 1; i++) {
+        let sb = document.createElement("div");
+        sb.setAttribute("class", "snakeBody");
+        sb.style.gridArea = trail[i]; // Ensure trail[i] is a valid grid-area string
+        container.append(sb);
+    }
+    
     checkOutBound();
 }
 
@@ -193,8 +229,11 @@ function checkFood() {
         createFruit();
         score++;
         updateScore();
+        // trail.push(sHead.style.gridArea);
+        // trailLength++;
+        return true;
     }
-
+    return false;
 }
 
 function checkOutBound() {
