@@ -19,22 +19,32 @@ body {
     color: white;
     font-size: 1rem;
     font-family: 'Arial';
-    z-index: -5;
+    z-index: -2;
     /* transition: background-color 0.5s ease; */
 }
 #snakeHead {
-    background-color: rgb(77, 167, 77);
+    /* background-color: rgb(77, 167, 77); */
     z-index: 1;
+    background-image: url("snakehead.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    /* border-bottom: 0.1vw solid rgb(77, 167, 77); */
 }
 .snakeBody {
-    background-color: rgb(127, 255, 127);
-    z-index: 1;
+    /* background-color: rgb(127, 255, 127); */
+    /* background-color: rgb(77, 167, 77); */
+    z-index: 0;
+    background: radial-gradient(rgb(63, 134, 63), rgb(77, 167, 77));
+    /* border: 0.1vw solid red; */
 }
 #fruit {
     /* background-color: red; */
     background-image: url("fruit.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center center; 
+    z-index: 2;
 }
 #scorebox {
     background-color: rgb(208, 208, 208);
@@ -45,9 +55,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 #mainmenu {
     background-color: aquamarine;
+    z-index: 3;
 }
 #gameovermsg {
     color: #1b1b1b;
@@ -58,13 +70,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 4;
     background-color: rgb(6, 223, 150);
     box-shadow: 0px 0px 15px rgb(6, 223, 150);
 }
 #restartbtn {
     background-color: rgb(7, 189, 128);
-    z-index: 3;
+    z-index: 5;
     border: 0.3rem solid rgb(4, 133, 90);
     border-top: 0.3rem solid rgb(6, 223, 150);
     border-left: 0.3rem solid rgb(6, 223, 150);

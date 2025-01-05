@@ -8,13 +8,20 @@ let score = 0;
 let toggleTurnKeyListener1 = 0;
 // let trailLength = 1;
 let trail = [];
+let redFruit;
 
 //------Calculate rows and columns------------//
 let rows = Math.floor(window.innerHeight / 35);
 let columns = Math.floor(window.innerWidth / 35);
 
 
-
+function checkCollision() {
+    let s1head = document.getElementById("snakeHead").style.gridArea;
+    if (trail.slice(0,-1).includes(s1head)) {
+        clearInterval(tickInterval); // Stop the game loop
+        gameEndMenu();
+    }
+}
 
 function toggleTurnKeyListener() {
     if (toggleTurnKeyListener1 === 0) {
@@ -81,14 +88,15 @@ function spawnHead() {
 
 
 function startMoving() {
-    tickInterval = setInterval(ticker, 300);
+    tickInterval = setInterval(ticker, 250);
 }
 
 function generateGrid() {
-    // Clear existing grid
-    container.innerHTML = "";
+    // Stop the game logic during reset
+    clearInterval(tickInterval);
+    container.innerHTML = ""; // Clear the container
 
-    // Recalculate rows and columns based on the new window size
+    // Recalculate rows and columns
     rows = Math.floor(window.innerHeight / 35);
     columns = Math.floor(window.innerWidth / 35);
 
@@ -98,23 +106,22 @@ function generateGrid() {
             let boxy = document.createElement("div");
             boxy.setAttribute("id", `${i}-${j}`);
             boxy.setAttribute("class", "box");
-            // boxy.innerText = `${i},${j}`;
             container.appendChild(boxy);
             document.getElementById(`${i}-${j}`).style.gridArea = `${i} / ${j} / ${i + 1} / ${j + 1}`;
         }
     }
 
+    // Reset game state
+    score = 0
+    trail = [];
     spawnHead();
     createScoreBoard();
     createFruit();
     startMoving();
     updateScore();
-    checkOutBound();
-    if (toggleTurnKeyListener1 === 0) {
-        toggleTurnKeyListener();
-    }
-    trail = [];
-    trail.push(document.getElementById("snakeHead").style.gridArea);
+    // Ensure key listener is reattached
+    toggleTurnKeyListener1 = 0; // Reset the toggle state
+    toggleTurnKeyListener();
 }
 
 generateGrid();
@@ -124,10 +131,11 @@ let resizeTimer; //For resizing the grid
 //----genarate the grid dynamically-----//
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
+    clearInterval(tickInterval); // Stop the game interval during resizing
     resizeTimer = setTimeout(() => {
-        generateGrid();
         rows = Math.floor(window.innerHeight / 35);
         columns = Math.floor(window.innerWidth / 35);
+        generateGrid(); // Regenerate grid and reset the game
     }, 200);
 });
 
@@ -141,32 +149,67 @@ function turn(event) {
     let move = document.getElementById("snakeHead");
     g1 = move.style.gridArea.split(" / ").map(Number);
 
-    if (event.key === "ArrowRight" && snakeHeading !== "E" && snakeHeading !== "W") {
+    // Prevent opposite or same direction changes
+    if (
+        (event.key === "ArrowRight" && snakeHeading === "W") ||
+        (event.key === "ArrowLeft" && snakeHeading === "E") ||
+        (event.key === "ArrowUp" && snakeHeading === "S") ||
+        (event.key === "ArrowDown" && snakeHeading === "N") ||
+        (event.key === "ArrowRight" && snakeHeading === "E") ||
+        (event.key === "ArrowLeft" && snakeHeading === "W") ||
+        (event.key === "ArrowUp" && snakeHeading === "N") ||
+        (event.key === "ArrowDown" && snakeHeading === "S")
+    ) {
+        return; // Ignore invalid direction changes
+    }
+
+    // Update direction and snake heading
+    let rotationAngle = 0;
+    if (event.key === "ArrowRight") {
+        rotationAngle = 90;
         g1[1] += 1;
         g1[3] += 1;
         snakeHeading = "E";
-    } else if (event.key === "ArrowLeft" && snakeHeading !== "W" && snakeHeading !== "E") {
+    } else if (event.key === "ArrowLeft") {
+        rotationAngle = -90;
         g1[1] -= 1;
         g1[3] -= 1;
         snakeHeading = "W";
-    } else if (event.key === "ArrowUp" && snakeHeading !== "N" && snakeHeading !== "S") {
+    } else if (event.key === "ArrowUp") {
+        rotationAngle = 0;
         g1[0] -= 1;
         g1[2] -= 1;
         snakeHeading = "N";
-    } else if (event.key === "ArrowDown" && snakeHeading !== "S" && snakeHeading !== "N") {
+    } else if (event.key === "ArrowDown") {
+        rotationAngle = 180;
         g1[0] += 1;
         g1[2] += 1;
         snakeHeading = "S";
     }
+
+    move.style.transform = `rotate(${rotationAngle}deg)`
+
     move.style.gridArea = `${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`;
     trail.push(`${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`);
     let cf = checkFood();
     if (!cf) {
         trail.shift();
     }
+    if (document.getElementsByClassName("snakeBody").length > 0) {
+        let delsnakebody = document.getElementsByClassName("snakeBody");
+        while (delsnakebody.length > 0) {
+            delsnakebody[0].remove();
+        }
+    }
+    for (let i = 0; i < trail.length - 1; i++) {
+        let sb = document.createElement("div");
+        sb.setAttribute("class", "snakeBody");
+        sb.style.gridArea = trail[i]; // Ensure trail[i] is a valid grid-area string
+        container.append(sb);
+    }
     checkOutBound();
+    checkCollision();
 }
-
 
 function createFruit() {
 
@@ -175,7 +218,12 @@ function createFruit() {
 
     let fruit = document.createElement("div");
     fruit.setAttribute("id", "fruit");
-    fruit.style.gridArea = `${fruitX} / ${fruitY} / ${fruitX + 1} / ${fruitY + 1}`;
+    redFruit = `${fruitX} / ${fruitY} / ${fruitX + 1} / ${fruitY + 1}`
+    if (trail.includes(redFruit)) {
+        createFruit();
+        return;
+    }
+    fruit.style.gridArea = redFruit;
     container.appendChild(fruit);
 }
 
@@ -219,6 +267,7 @@ function ticker() {
     }
     
     checkOutBound();
+    checkCollision();
 }
 
 function checkFood() {
