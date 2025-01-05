@@ -230,16 +230,18 @@ function turn(event) {
     let move = document.getElementById("snakeHead");
     g1 = move.style.gridArea.split(" / ").map(Number);
 
+    // Only handle arrow keys
+    const validKeys = ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown"];
+    if (!validKeys.includes(event.key)) {
+        return; // Ignore non-arrow keys
+    }
+
     // Prevent opposite or same direction changes
     if (
         (event.key === "ArrowRight" && snakeHeading === "W") ||
         (event.key === "ArrowLeft" && snakeHeading === "E") ||
         (event.key === "ArrowUp" && snakeHeading === "S") ||
-        (event.key === "ArrowDown" && snakeHeading === "N") ||
-        (event.key === "ArrowRight" && snakeHeading === "E") ||
-        (event.key === "ArrowLeft" && snakeHeading === "W") ||
-        (event.key === "ArrowUp" && snakeHeading === "N") ||
-        (event.key === "ArrowDown" && snakeHeading === "S")
+        (event.key === "ArrowDown" && snakeHeading === "N")
     ) {
         return; // Ignore invalid direction changes
     }
@@ -267,7 +269,7 @@ function turn(event) {
         snakeHeading = "S";
     }
 
-    move.style.transform = `rotate(${rotationAngle}deg)`
+    move.style.transform = `rotate(${rotationAngle}deg)`;
 
     move.style.gridArea = `${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`;
     trail.push(`${g1[0]} / ${g1[1]} / ${g1[2]} / ${g1[3]}`);
@@ -290,6 +292,7 @@ function turn(event) {
     checkOutBound();
     checkCollision();
 }
+
 
 function createFruit() {
 
