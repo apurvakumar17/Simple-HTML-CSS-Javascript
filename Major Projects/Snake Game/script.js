@@ -9,15 +9,95 @@ let toggleTurnKeyListener1 = 0;
 // let trailLength = 1;
 let trail = [];
 let redFruit;
+let touchStartX = 0;
+let touchStartY = 0;
+let rotationAngle = 0;
+let g1;
 
 //------Calculate rows and columns------------//
 let rows = Math.floor(window.innerHeight / 35);
 let columns = Math.floor(window.innerWidth / 35);
 
+function touchStartHandler(event) {
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+}
+
+function touchMoveHandler(event) {
+    const touch = event.touches[0];
+    const deltaY = touch.clientY - touchStartY;
+
+    // Prevent default behavior for downward swipes (to avoid page refresh)
+    if (deltaY > 10) {
+        event.preventDefault();
+    }
+}
+
+function touchEndHandler(event) {
+    let move = document.getElementById("snakeHead");
+    g1 = move.style.gridArea.split(" / ").map(Number);
+
+    const touch = event.changedTouches[0];
+    const touchEndX = touch.clientX;
+    const touchEndY = touch.clientY;
+
+    // Detect swipe direction
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Horizontal swipe (left or right)
+        if (deltaX > 0) {
+            // Swipe Right
+            if (snakeHeading !== "W") {
+                rotationAngle = 90;
+                g1[1] += 1;
+                g1[3] += 1;
+                snakeHeading = "E";
+            }
+        } else {
+            // Swipe Left
+            if (snakeHeading !== "E") {
+                rotationAngle = -90;
+                g1[1] -= 1;
+                g1[3] -= 1;
+                snakeHeading = "W";
+            }
+        }
+    } else {
+        // Vertical swipe (up or down)
+        if (deltaY > 0) {
+            // Swipe Down
+            if (snakeHeading !== "N") {
+                rotationAngle = 180;
+                g1[0] += 1;
+                g1[2] += 1;
+                snakeHeading = "S";
+            }
+        } else {
+            // Swipe Up
+            if (snakeHeading !== "S") {
+                rotationAngle = 0;
+                g1[0] -= 1;
+                g1[2] -= 1;
+                snakeHeading = "N";
+            }
+        }
+    }
+    move.style.transform = `rotate(${rotationAngle}deg)`;
+}
+
+function touchCompatibility() {
+    document.addEventListener("touchstart", touchStartHandler, { passive: false });
+    document.addEventListener("touchmove", touchMoveHandler, { passive: false });
+    document.addEventListener("touchend", touchEndHandler, { passive: false });
+
+}
 
 function checkCollision() {
     let s1head = document.getElementById("snakeHead").style.gridArea;
-    if (trail.slice(0,-1).includes(s1head)) {
+    if (trail.slice(0, -1).includes(s1head)) {
         clearInterval(tickInterval); // Stop the game loop
         gameEndMenu();
     }
@@ -26,6 +106,7 @@ function checkCollision() {
 function toggleTurnKeyListener() {
     if (toggleTurnKeyListener1 === 0) {
         document.addEventListener("keydown", turn);
+        document.add
         toggleTurnKeyListener1 = 1;
     } else {
         document.removeEventListener("keydown", turn);
@@ -122,6 +203,7 @@ function generateGrid() {
     // Ensure key listener is reattached
     toggleTurnKeyListener1 = 0; // Reset the toggle state
     toggleTurnKeyListener();
+    touchCompatibility();
 }
 
 generateGrid();
@@ -144,7 +226,6 @@ window.addEventListener("resize", () => {
 
 
 
-let g1;
 function turn(event) {
     let move = document.getElementById("snakeHead");
     g1 = move.style.gridArea.split(" / ").map(Number);
@@ -164,7 +245,6 @@ function turn(event) {
     }
 
     // Update direction and snake heading
-    let rotationAngle = 0;
     if (event.key === "ArrowRight") {
         rotationAngle = 90;
         g1[1] += 1;
@@ -252,7 +332,7 @@ function ticker() {
     if (!cf) {
         trail.shift();
     }
-    console.log(trail);
+    // console.log(trail);
     if (document.getElementsByClassName("snakeBody").length > 0) {
         let delsnakebody = document.getElementsByClassName("snakeBody");
         while (delsnakebody.length > 0) {
@@ -265,7 +345,7 @@ function ticker() {
         sb.style.gridArea = trail[i]; // Ensure trail[i] is a valid grid-area string
         container.append(sb);
     }
-    
+
     checkOutBound();
     checkCollision();
 }
