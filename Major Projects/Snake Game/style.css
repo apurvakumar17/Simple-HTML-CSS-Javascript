@@ -20,26 +20,19 @@ body {
     font-size: 1rem;
     font-family: 'Arial';
     z-index: -2;
-    /* transition: background-color 0.5s ease; */
 }
 #snakeHead {
-    /* background-color: rgb(77, 167, 77); */
     z-index: 1;
     background-image: url("snakehead.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center; 
-    /* border-bottom: 0.1vw solid rgb(77, 167, 77); */
 }
 .snakeBody {
-    /* background-color: rgb(127, 255, 127); */
-    /* background-color: rgb(77, 167, 77); */
     z-index: 0;
     background: radial-gradient(rgb(63, 134, 63), rgb(77, 167, 77));
-    /* border: 0.1vw solid red; */
 }
 #fruit {
-    /* background-color: red; */
     background-image: url("fruit.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -84,12 +77,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* #restartbtn:hover {
-    background-color: rgb(6, 176, 119);
-    border: 0.3rem solid rgb(6, 223, 150);
-    border-top: 0.3rem solid rgb(4, 133, 90);
-    border-left: 0.3rem solid rgb(4, 133, 90);
-} */
 #restartbtn:hover {
     cursor: pointer;
 }
