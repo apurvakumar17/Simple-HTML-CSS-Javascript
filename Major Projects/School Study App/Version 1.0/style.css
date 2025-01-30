@@ -1,0 +1,186 @@
+/* Resetting default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;;
+}
+body {
+    background-color: rgb(221, 226, 255);
+}
+/*NCERT Hindi Books Pending to work on*/
+#not_available {
+    background-color: rgb(255, 114, 114);
+    outline: 0.4vh solid rgb(255, 84, 84);
+}
+#not_available:hover {
+    background-color: rgb(255, 47, 47);
+}
+/* Navbar styles */
+#navbar {
+    width: 100%;
+    background-color: #004d99;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* position: fixed; */
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00e6e6;
+}
+
+/* Theme button */
+#theme-button button {
+    padding: 8px 15px;
+    background-color: #ffffff;
+    color: #004d99;
+    border: none;
+    border-radius: 500vw;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-button button:hover {
+    background-color: #b5b5b5;
+    color: white;
+}
+
+
+.ops {
+    /* height: 20vh; */display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-direction: column; /* If images and text are stacked */
+    width: 15vh;
+    margin: 3%;
+    padding: 1%;
+    font-family: 'Arial';
+    border-radius: 1.5vh;
+    background-color: rgba(221, 226, 255, 0.556);
+    outline: 0.4vh solid rgb(197, 211, 250);
+}
+
+.ops:hover {
+    cursor: pointer;
+    background-color: rgba(202, 208, 240, 0.556);
+}
+.ops span {
+    display: block;
+    margin-top: 2%;
+    font-size: 95%;
+}
+#content {
+    background-color: rgb(221, 226, 255);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.cbox {
+    margin: 5vw;
+    background-color: rgb(255, 255, 255);
+    width: 40vw;
+    text-align: center;
+    padding-top: 2%;
+    border-radius: 3vh;
+    overflow-y: auto;
+    height: 77vh;
+    margin-bottom: 0;
+}
+.ns {
+    width: 100%;
+    /* margin-top: 10%;
+    margin-bottom: 10%; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.boxhead {
+    width: 100%;
+    text-align: center;
+    font-size: 4.5vh;
+    padding: 3%;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+.heroimg {
+    height: 10vh;
+    padding-bottom: 1vh;
+}
+.direction {
+    height: 4.5vh;
+    padding-right: 1vh;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    #navbar-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 5%;
+    }
+
+    #content {
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    .cbox {
+        width: 90%;          
+        margin: 2vw 0;
+        height:fit-content;
+    }
+
+    .ns {
+        flex-direction: row;
+        /* margin-top: 20%;
+        margin-bottom: 20%; */
+    }
+
+    /* .ops {
+        padding-top: 10%;
+    } */
+
+    .heroimg {
+        height: 50%;
+    }
+}

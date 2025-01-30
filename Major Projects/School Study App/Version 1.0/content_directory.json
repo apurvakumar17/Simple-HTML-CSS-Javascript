@@ -1,0 +1,303 @@
+{
+    "ncert": {
+        "english_ncert_book": {
+            "class1": {
+                "english": "https://drive.google.com/file/d/1m1lDzqQ0LU6k2cuZIP2boCXVzY3yiR6u/view?usp=sharing",
+                "hindi": "https://drive.google.com/file/d/1PeJo0h331-0rv_dt-meGWzPvJYsvgm0-/view?usp=sharing",
+                "mathematics": "https://drive.google.com/file/d/1xenB6O2l1PS2WY24bWg-FfSFbw8KOCpZ/view?usp=sharing"
+            },
+            "class2": {
+                "english": "https://drive.google.com/file/d/1pvp32anyk2rSVehu_Vm1CqnYgLvuiHM4/view?usp=sharing",
+                "hindi": "https://drive.google.com/file/d/1WuVAygTT86_wKKqxcTWP1b3SgCIbBmcb/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1gUa4dkvNt_9hUgNTYYRqnUjxmA3ilMM9/view?usp=drive_link"
+            },
+            "class3": {
+                "english": "https://drive.google.com/file/d/1BDj60rtPOOJqE-vdJYWJG4lTm10vhzmi/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1DHskAQ4-IvL1E7QgcgluYLm2F1K1eOS5/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1W0maeuC7b23QvQazGT0rJMTvsU1f7JNz/view?usp=drive_link"
+            },
+            "class4": {
+                "english": "https://drive.google.com/file/d/1KpinPKG2bE2gGu7kBvghOuwirtgCn_gU/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1B50leOH-ZvNas6qXI50Ev_Xxj45iS1cg/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1iHv3PLnHjAN8B4yjpn3zJun-SHyuDHUv/view?usp=drive_link",
+                "evs": "https://drive.google.com/file/d/1TsQX6J57o8CbB1V5in8diBrLo_YcYiGj/view?usp=drive_link"
+            },
+            "class5": {
+                "english": "https://drive.google.com/file/d/1PRxQqcJPP9tjWv4_uxoPc38jCBZrLqtr/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1Vw5E9e8U33Rf-pEmrCLlQhkL5Xhma52d/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/12_fCKmtk8IgGIDqRYp7xaj9xbriFl_Ym/view?usp=drive_link",
+                "evs": "https://drive.google.com/file/d/11dMHJeRxCRgoRcZc1E33xEFByNxdJBdU/view?usp=drive_link"
+            },
+            "class6": {
+                "english": "https://drive.google.com/file/d/1FXvMXV-K1-aohsp0z98GOEzwG52sHJQd/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1_D6kzY94ukDolwESYWX3bb3KdQF3oJlZ/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1_-kvgXRAcF52yDORNdFaahz7WU0FJejB/view?usp=drive_link",
+                "science": "https://drive.google.com/file/d/1wS2BqQmXTzEmuW-dFSXL1M5wGxmO9esY/view?usp=drive_link",
+                "social_science": "https://drive.google.com/file/d/1DAj1ODMxuRjsfGpr8Y9ZIUlkmf-ufYMS/view?usp=drive_link",
+                "sanskrit": "https://drive.google.com/file/d/1Gibw2Aa8_2NA_Hlwd5h7HUGj5duVoKud/view?usp=drive_link",
+                "arts": "https://drive.google.com/file/d/1kAwQGA-pwH9mlbfFLP8jwTfaXJF7mg8F/view?usp=drive_link"
+            },
+            "class7": {
+                "english": "https://drive.google.com/file/d/1SGzJl_xQce0D8xZILjL12FiRDA7TDZYq/view?usp=drive_link",
+                "english_reader": "https://drive.google.com/file/d/1byT693b_98LOEp_VcdAUAnU7PkGgCTXj/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/12ezNhFuHB0B4YWa8GCylXBUI6N4hwS9F/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1tgwyx0MVhUydLMg_KniGmewlV1iZSgr4/view?usp=drive_link",
+                "science": "https://drive.google.com/file/d/1ES-FTEUqBwmLqEkFG9dwlEc8AbCg-C1r/view?usp=drive_link",
+                "civics": "https://drive.google.com/file/d/1IynLQj44-rGb837Y94fJkOBlLtNat0Jt/view?usp=drive_link",
+                "history": "https://drive.google.com/file/d/1snn_e9ENbHYMrNfk4i1oOjfUyQumyKeG/view?usp=drive_link",
+                "geography": "https://drive.google.com/file/d/1KA6kzVKar6Quu-Z-ifa2cytSmIaSc6S3/view?usp=drive_link",
+                "sanskrit": "https://drive.google.com/file/d/1LfC716Bi067qLL2F6EfNmtWSku2LA-wQ/view?usp=drive_link"
+            },
+            "class8": {
+                "english": "https://drive.google.com/file/d/1x5xRfTaZp-0Lxo263A8aZqKJoC-V37tQ/view?usp=drive_link",
+                "english_reader": "https://drive.google.com/file/d/1yqwESYspgn8VRXBlWAOSNK2LPX-NEi0S/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1W3KUHRuzB9UZ4hgC4VHA9QQp1C9ZeGDC/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1yoAycExFGPVd0PxDYQ70P5H0UHm1imqT/view?usp=sharing",
+                "science": "https://drive.google.com/file/d/129u2tFc4suKk1K2ceW1k5_p9peBInSxH/view?usp=drive_link",
+                "civics": "https://drive.google.com/file/d/1cbZWRqoQ3ay607K57oDPWEGgRkd-QUfp/view?usp=drive_link",
+                "history": "https://drive.google.com/file/d/1iBbfNVh7rCGEducaWAjldGJTUkflAG39/view?usp=drive_link",
+                "geography": "https://drive.google.com/file/d/1L3HgOx9i-ir10ITJozOfXftuYK03FfWa/view?usp=drive_link",
+                "sanskrit": "https://drive.google.com/file/d/1mrpvMk2PRYrXVH3A_rCtlRchkDvaRqBE/view?usp=drive_link"
+            },
+            "class9": {
+                "english": "https://drive.google.com/file/d/1yH3jPpvC9r5leSBxGFvAW6ppS-d9GDc3/view?usp=drive_link",
+                "english_reader": "https://drive.google.com/file/d/1-NfYW2unATmXXXF5jUFVHq6HCLKnwSJn/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1QXXEOsFAqHkG42Lx5fmcuvnJbFV_vhyc/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1gda2pfcrPRbIYSc55r3K7jlO3YCeV6r5/view?usp=drive_link",
+                "science": "https://drive.google.com/file/d/1euHGN1iq0pQC0X2q2VNrEiuA1wbWv2ta/view?usp=drive_link",
+                "civics": "https://drive.google.com/file/d/1YNa2iAyq5FlO2XXYJf851XMHm4KKQ-VR/view?usp=drive_link",
+                "history": "https://drive.google.com/file/d/17zwcdlivozmpNhyA1RuEL6fSkWeJWgR3/view?usp=drive_link",
+                "geography": "https://drive.google.com/file/d/13h_ICn7dtYqq57knURDAlBiOE6s0IWKp/view?usp=drive_link",
+                "economics": "https://drive.google.com/file/d/1ashU_bMUqaH244iBHD3UyPtXM-fZUXjc/view?usp=drive_link",
+                "sanskrit": "https://drive.google.com/file/d/1uhH4irH4x-XcPr6VfeYZfm_pq9U7Q7Ir/view?usp=drive_link",
+                "ict": "https://drive.google.com/file/d/13qAs1bq67rmJB5W7n_yf2EdNQqvEqpCB/view?usp=drive_link"
+            },
+            "class10": {
+                "english": "https://drive.google.com/file/d/17f-XyN79S1y3-aJ98MfmdbmaZLENC9Ma/view?usp=drive_link",
+                "english_reader": "https://drive.google.com/file/d/10-Odfrqq_nmh0SIXex_RGHpjLvX0oNkx/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/18WBGaQ2YtaM359yNOCiMiO-1Uf_qP_GU/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1rIJTliBX6VnEAP_nFNjFhQ6lWeqoCNZI/view?usp=drive_link",
+                "science": "https://drive.google.com/file/d/11bycG1fmJCGc91r1ThV3m8kL-Wj8iI-h/view?usp=drive_link",
+                "civics": "https://drive.google.com/file/d/16za0g2NJzS3JnjGvHy78BjEpULSASGZZ/view?usp=drive_link",
+                "history": "https://drive.google.com/file/d/1tmeDKO1SH9XJWrOzDBbg6fhPYeiuTxNB/view?usp=drive_link",
+                "geography": "https://drive.google.com/file/d/1Fm10VBxd4Rua6rYz6DcSwwMqhi2DxkoQ/view?usp=drive_link",
+                "economics": "https://drive.google.com/file/d/1X5YDgiiiLTcBGl6YQ2v3KTJNC3roFRLA/view?usp=drive_link",
+                "sanskrit": "https://drive.google.com/file/d/13eo3ywt6hpQ51vPyn6OQZnrjI8B9969q/view?usp=drive_link"
+            },
+            "class11": {
+                "sanskrit": "",
+                "accountancy": "https://drive.google.com/file/d/1atLsQdDolVXO3sMML3lq9jzIpbRboPBv/view?usp=drive_link",
+                "chemistry": "https://drive.google.com/file/d/1JmZB86oTb9MamBmjWkgCVHSFwdCg3bkH/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1mqe1w_Hbqh_9yYpE12RPAe_Jz7Fb7FEZ/view?usp=drive_link",
+                "biology": "https://drive.google.com/file/d/1HrMgvVS-ZXePQFcrJmRFcjPzzTq5prTW/view?usp=drive_link",
+                "psychology": "https://drive.google.com/file/d/1oaoobUWsqYWym8lbkeHQriLn4CgvOzJs/view?usp=drive_link",
+                "geography": "https://drive.google.com/file/d/1_NZ35XWKnl2_U1QLbvRiwqVPtzv7S9X5/view?usp=drive_link",
+                "physics": "https://drive.google.com/file/d/1cNthT78aY74GR9NpHF0E8j7R-G2kdI81/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1WL56kJs5vwffXf3ZAdEiIM7dLCbLNRBv/view?usp=drive_link",
+                "sociology": "https://drive.google.com/file/d/1XCyaf-0x-mr4vXY8oweb4hT1T1K90K7o/view?usp=drive_link",
+                "english": "https://drive.google.com/file/d/1kGvhvkHU-IEaVDGRNJvE-yQQKURLgeoK/view?usp=drive_link",
+                "english_reader": "https://drive.google.com/file/d/1r-qFHpKwexOVIrel1OZA9_s8WwpUVJc6/view?usp=drive_link",
+                "political_science": "https://drive.google.com/file/d/1oRabugTM0cHcw9xKKbiVt4CfhgoYWMX8/view?usp=drive_link",
+                "history": "https://drive.google.com/file/d/1zENd64x-VgflqIQpnPlu7jel0--vr0T4/view?usp=drive_link",
+                "economics": "https://drive.google.com/file/d/15bKn4Q7XJisRg2VmX1_KzL3oCjugVsce/view?usp=drive_link",
+                "business_studies": "https://drive.google.com/file/d/1mlo35pRY_Xu6dWxhbztk2kmSX7Up4V9v/view?usp=drive_link",
+                "home_science": "https://drive.google.com/file/d/1KrwK-ZrQ19xtzdV8NTA8FAFcIFww54GY/view?usp=drive_link",
+                "fine_art": "https://drive.google.com/file/d/1FR3LpRWiIYwoFR00K2QSZyoAUjEJDbU-/view?usp=drive_link",
+                "informatics_practices": "https://drive.google.com/file/d/1IDHZHU7PgUwThZqWEk6Lt9MA23rh2YZs/view?usp=drive_link",
+                "computer_science": "https://drive.google.com/file/d/1Mu-7lTxRkk1X1mGw6DNbzZpJuL7ufI3V/view?usp=drive_link",
+                "physical_education": "https://drive.google.com/file/d/1nyr42TtNMFOU7X0sizqVEmgeCiNU1Rzd/view?usp=drive_link"
+            },
+            "class12": {
+                "sanskrit": "https://drive.google.com/file/d/1hEHL6ewert9s2-8sR9KeX3BFdzxcWhJv/view?usp=drive_link",
+                "accountancy": "https://drive.google.com/file/d/1uT16yqIUZ8lZZNSPmtLGkSECU3-Exwh8/view?usp=drive_link",
+                "chemistry": "https://drive.google.com/file/d/1undfY6P--q0NPNlB9yZ7JShT604V9OPx/view?usp=drive_link",
+                "mathematics": "https://drive.google.com/file/d/1KoDX6F4WNnVn9xOYOnx7q9iejV7GVbyy/view?usp=drive_link",
+                "biology": "https://drive.google.com/file/d/1zouNvNDJiKEtUd1FWYq2t2BlrJlMRIJj/view?usp=drive_link",
+                "psychology": "https://drive.google.com/file/d/13jGl1SXi7ECH7lhiGnz6QcnD5ivCrecz/view?usp=drive_link",
+                "geography": "https://drive.google.com/file/d/1cloNTFWncsjPe2AcGysss99oyEzF8qG5/view?usp=drive_link",
+                "physics": "https://drive.google.com/file/d/1U3H1lnStKC6bYSQWT6su2gx9tsqO2Rgu/view?usp=drive_link",
+                "hindi": "https://drive.google.com/file/d/1252D_ET1NJRSdDMHebaLzkg9RliximCO/view?usp=drive_link",
+                "sociology": "https://drive.google.com/file/d/1KmYhmzEU4yMBGFlIFK8md0Aizu6HYAks/view?usp=drive_link",
+                "english": "https://drive.google.com/file/d/19cLnaGMhI3bv_lEHWn0IpGHnbo_Sc7zd/view?usp=drive_link",
+                "english_reader": "https://drive.google.com/file/d/1tpF9k-DxpqhZN1HtrHH94aEhmRVGSDPE/view?usp=drive_link",
+                "political_science": "https://drive.google.com/file/d/1dGMPY6H6ncbmGpaEI4tDeC99n27aiqrc/view?usp=drive_link",
+                "history": "https://drive.google.com/file/d/1KKoDLBpIDnR43lg675W21x8QDEfEAxDn/view?usp=drive_link",
+                "economics": "https://drive.google.com/file/d/1q0ckFnwMWwpJORyXnkLHKrWPW9RTGKh-/view?usp=drive_link",
+                "business_studies": "https://drive.google.com/file/d/1PHIgTeddE2QpU5I8kfTqAjguSXf5e44_/view?usp=drive_link",
+                "home_science": "https://drive.google.com/file/d/1nLWh9yaNU6ody-U_6-Khl4xv3r09k2Fh/view?usp=drive_link",
+                "fine_art": "https://drive.google.com/file/d/1OLp4sQ-0nXlcvfHXI8lS3CfJWDMN1lKP/view?usp=drive_link",
+                "informatics_practices": "https://drive.google.com/file/d/1RwAYO44vTnZVYbbMS1gK0G5n2pr8WyF4/view?usp=drive_link",
+                "computer_science": "https://drive.google.com/file/d/1kDtt8t8y5fW0Qor19drLCXZkbSnq0KBq/view?usp=drive_link"
+            }
+        },
+        "hindi_ncert_book": {
+            "class1": {
+                "english": "",
+                "hindi": "",
+                "mathematics": ""
+            },
+            "class2": {
+                "english": "",
+                "hindi": "",
+                "mathematics": ""
+            },
+            "class3": {
+                "english": "",
+                "hindi": "",
+                "mathematics": ""
+            },
+            "class4": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "evs": ""
+            },
+            "class5": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "evs": ""
+            },
+            "class6": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "science": "",
+                "social_science": "",
+                "sanskrit": "",
+                "arts": ""
+            },
+            "class7": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "science": "",
+                "social_science": "",
+                "sanskrit": ""
+            },
+            "class8": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "science": "",
+                "social_science": "",
+                "sanskrit": ""
+            },
+            "class9": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "science": "",
+                "social_science": "",
+                "sanskrit": "",
+                "ict": ""
+            },
+            "class10": {
+                "english": "",
+                "hindi": "",
+                "mathematics": "",
+                "science": "",
+                "social_science": "",
+                "sanskrit": ""
+            },
+            "class11": {
+                "sanskrit": "",
+                "accountancy": "",
+                "chemistry": "",
+                "mathematics": "",
+                "biology": "",
+                "psychology": "",
+                "geography": "",
+                "physics": "",
+                "hindi": "",
+                "sociology": "",
+                "english": "",
+                "political_science": "",
+                "history": "",
+                "economics": "",
+                "business_studies": "",
+                "home_science": "",
+                "fine_art": "",
+                "informatics_practices": "",
+                "computer_science": "",
+                "physical_education": ""
+            },
+            "class12": {
+                "sanskrit": "",
+                "accountancy": "",
+                "chemistry": "",
+                "mathematics": "",
+                "biology": "",
+                "psychology": "",
+                "geography": "",
+                "physics": "",
+                "hindi": "",
+                "sociology": "",
+                "english": "",
+                "political_science": "",
+                "history": "",
+                "economics": "",
+                "business_studies": "",
+                "home_science": "",
+                "fine_art": "",
+                "informatics_practices": "",
+                "computer_science": ""
+            }
+        },
+        "ncert_solution": {
+            "class6": {},
+            "class7": {},
+            "class8": {},
+            "class9": {},
+            "class10": {},
+            "class11": {},
+            "class12": {}
+        },
+        "ncert_notes": {
+            "class6": {},
+            "class7": {},
+            "class8": {},
+            "class9": {},
+            "class10": {},
+            "class11": {},
+            "class12": {}
+        },
+        "explanation_videos": { 
+            "class6": {},
+            "class7": {},
+            "class8": {},
+            "class9": {},
+            "class10": {},
+            "class11": {},
+            "class12": {}
+        }
+    },
+    "support_material": {
+        "sample_paper": {
+            "class6": {},
+            "class7": {},
+            "class8": {},
+            "class9": {},
+            "class10": {},
+            "class11": {},
+            "class12": {}
+        },
+        "syllabus": {
+            "class1": {},
+            "class2": {},
+            "class3": {},
+            "class4": {},
+            "class5": {},
+            "class6": {},
+            "class7": {},
+            "class8": {},
+            "class9": {},
+            "class10": {},
+            "class11": {},
+            "class12": {}
+        },
+        "useful_books": {
+            
+        }
+    }
+}
