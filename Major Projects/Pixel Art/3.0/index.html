@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pixel Art</title>
+        <link rel="shortcut icon" href="icon.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="menubar">
+            <div id="clear">Clear Board</div>
+            <div id="eraser">Pick BG Color</div>
+            <div id="saveasimg">Save as Image</div>
+            <label for="colorpicker">Choose a color:</label>
+            <input type="color" value="#ff0000" id="colorpicker" />
+            <label for="density">Canvas Dimension: </label>
+            <input
+                type="range"
+                name="density"
+                id="density"
+                min="20"
+                max="100"
+                step="5"
+                value="35"
+            />
+            <div id="widthOut">0X0</div>
+            <div id="recentc">
+                <div class="cls"></div>
+                <div class="cls"></div>
+                <div class="cls"></div>
+                <div class="cls"></div>
+                <div class="cls"></div>
+            </div>
+        </div>
+        <div id="container"></div>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </body>
+</html>
