@@ -89,9 +89,18 @@ for (let il = 0; il <= 7; il++) {
     IMAGES[il].src = image_address[il];
 }
 
+const touchSound = new Audio('sounds/touch floor.wav');
+const rotateSound = new Audio('sounds/rotation.wav');
+const lineClearSound = new Audio('sounds/delete line.wav');
+const overSound = new Audio('sounds/gameover.wav');
+
+
 const ROWS = 20;
 const COLS = 10;
+let tick = 500;
+let ppstate = "pause";
 let scoreBoard = document.getElementById("scoreBoard");
+let highscore = document.getElementById("hscore");
 const canvas = document.getElementById("tetrisCanvas");
 const ctx = canvas.getContext("2d");
 ctx.scale(30, 30);
@@ -105,7 +114,7 @@ for (let i = 1; i <= 7; i++) {
         loadedImages++;
         if (loadedImages === 7) {
             pieceObj = getRandomPiece();
-            startMoving(); // ✅ Start only when all images are ready
+            startMoving(); 
         }
     };
 }
@@ -216,7 +225,7 @@ function collides(grid, pObj) {
 }
 
 function startMoving() {
-    tickInterval = setInterval(ticker, 500);
+    tickInterval = setInterval(ticker, tick);
 }
 
 function clearLines() {
@@ -234,20 +243,60 @@ function clearLines() {
     if (linesCleared > 0) {
         score += linesCleared * 10;
         scoreBoard.innerText = "Score: " + score;
+        setHScore();
+        tick = Math.max(100, tick - (linesCleared * 20));
+        clearInterval(tickInterval);
+        tickInterval = setInterval(ticker, tick);
+        // let lineClearSound = new Audio('sounds/delete line.wav');
+        lineClearSound.cloneNode().play();
     }
+}
+
+function setHScore() {
+    const storedHighScore = parseInt(getHScore());
+
+    if (isNaN(storedHighScore)) {
+        localStorage.setItem("highestScore", score);
+        highscore.innerText = "High Score: " + score;
+    } else if (score > storedHighScore) {
+        localStorage.setItem("highestScore", score);
+        highscore.innerText = "High Score: " + score;
+    } else {
+        highscore.innerText = "High Score: " + storedHighScore;
+    }
+}
+
+function getHScore() {
+    return localStorage.getItem("highestScore");
+}
+
+function aboutToCollide(grid, pObj) {
+    const simulatedPiece = {
+        ...pObj,
+        y: pObj.y + 1
+    };
+    return collides(grid, simulatedPiece);
 }
 
 function ticker() {
     pieceObj.y++;
+    let played = false;
+    if (aboutToCollide(grid, pieceObj) && !(collides(grid, pieceObj))) {
+        // let touchSound = new Audio('sounds/touch floor.wav');
+        touchSound.cloneNode().play();
+    }
     if (collides(grid, pieceObj)) {
-        pieceObj.y--; // go back to valid state
+        pieceObj.y--;
         lockPiece();
         clearLines();
         pieceObj = getRandomPiece();
 
         if (collides(grid, pieceObj)) {
+            // let overSound = new Audio('sounds/gameover.wav');
+            overSound.cloneNode().play()
             clearInterval(tickInterval);
-            alert("Game Over!");
+            scoreBoard.innerText = "Game Over";
+            scoreBoard.style.color = "red";
         }
     }
     render();
@@ -266,6 +315,11 @@ function generateGrid() {
 }
 
 function moveDown() {
+    if (aboutToCollide(grid, pieceObj) && !collides(grid, pieceObj)) {
+        // let touchSound = new Audio('sounds/touch floor.wav');
+        touchSound.cloneNode().play();
+    }
+
     pieceObj.y++;
     if ((collides(grid, pieceObj))) {
         pieceObj.y--;
@@ -316,7 +370,6 @@ function rotate() {
     }
 }
 
-
 document.addEventListener("keydown", function(e) {
     let key = e.code;
     if (key == "ArrowDown") {
@@ -327,5 +380,48 @@ document.addEventListener("keydown", function(e) {
         moveRight();
     } else if (key == "ArrowUp") {
         rotate();
+        // let rotateSound = new Audio("sounds/rotation.wav");
+        rotateSound.cloneNode().play()
     }
+});
+
+window.onload = () => {
+    // Warm up all sounds by playing muted
+    const sounds = [touchSound, rotateSound, lineClearSound, overSound];
+    sounds.forEach(snd => {
+        snd.volume = 0;
+        snd.play().then(() => {
+            snd.pause();
+            snd.currentTime = 0;
+            snd.volume = 1;
+        }).catch(e => {
+            // some browsers block autoplay, ignore silently
+        });
+    });
+    
+    const stored = getHScore();
+    if (stored !== null) {
+        highscore.innerText = "High Score: " + parseInt(stored);
+    } else {
+        highscore.innerText = "High Score: 0";
+    }
+};
+
+let playpauseB = document.getElementById("playpause");
+playpauseB.addEventListener("click",() => {
+    const currentStyle = getComputedStyle(playpauseB).backgroundImage;
+    const firstUrl = currentStyle.split(",")[0].trim();
+    const secondUrl = currentStyle.split(",")[1].trim();
+    if (firstUrl.includes("pause")) {
+        clearInterval(tickInterval);
+        playpauseB.style.backgroundImage = 'url("/play.png"), ' + secondUrl;
+    } else {
+        tickInterval = setInterval(ticker, tick);
+        playpauseB.style.backgroundImage = 'url("/pause.png"), ' + secondUrl;
+    }
+});
+
+let restartB = document.getElementById("restart");
+restartB.addEventListener("click", () => {
+    location.reload();
 });

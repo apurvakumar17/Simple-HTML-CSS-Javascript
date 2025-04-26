@@ -9,11 +9,12 @@ body {
     align-items: center;
     margin: 0;
     height: 100vh;
-
+    background-color: black;
 }
 h2 {
     font-family: 'Press Start 2P';
     color: whitesmoke;
+    margin: 5px;
 }
 canvas {
     background-color: rgb(75, 75, 75);
@@ -21,4 +22,33 @@ canvas {
     background-size: 30px;
     border: 10px double grey;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.638);
+}
+h5 {
+    font-family: 'Press Start 2P';
+    color: rgb(204, 204, 204);
+    margin: 5px;
+}
+#panel {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    /* filter: brightness(50%); */
+}
+
+#playpause {
+    background-image:url("pause.png"), url("blocks/deepslate.webp");
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+#restart {
+    background-image:url("restart.png"), url("blocks/deepslate.webp");
+    background-position: center;
+    image-rendering: pixelated;
 }
