@@ -59,7 +59,6 @@ const SHAPES = [
     ],
 ];
 
-
 //----------Images of each block----------//
 const IMAGES = [
     new Image(),
@@ -89,11 +88,10 @@ for (let il = 0; il <= 7; il++) {
     IMAGES[il].src = image_address[il];
 }
 
-const touchSound = new Audio('sounds/touch floor.wav');
-const rotateSound = new Audio('sounds/rotation.wav');
-const lineClearSound = new Audio('sounds/delete line.wav');
-const overSound = new Audio('sounds/gameover.wav');
-
+const touchSound = new Audio("sounds/touch floor.wav");
+const rotateSound = new Audio("sounds/rotation.wav");
+const lineClearSound = new Audio("sounds/delete line.wav");
+const overSound = new Audio("sounds/gameover.wav");
 
 const ROWS = 20;
 const COLS = 10;
@@ -114,13 +112,16 @@ for (let i = 1; i <= 7; i++) {
         loadedImages++;
         if (loadedImages === 7) {
             pieceObj = getRandomPiece();
-            startMoving(); 
+            startMoving();
         }
     };
 }
 
 function getDimensions(matrix) {
-    let top = Infinity, bottom = -1, left = Infinity, right = -1;
+    let top = Infinity,
+        bottom = -1,
+        left = Infinity,
+        right = -1;
 
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
@@ -211,10 +212,10 @@ function collides(grid, pObj) {
                 let newX = j + o.x;
                 // Check wall or floor or occupied space
                 if (
-                    newY >= ROWS ||                     // below bottom
-                    newX < 0 ||                         // left wall
-                    newX >= COLS ||                     // right wall
-                    (newY >= 0 && grid[newY][newX])     // hits something
+                    newY >= ROWS || // below bottom
+                    newX < 0 || // left wall
+                    newX >= COLS || // right wall
+                    (newY >= 0 && grid[newY][newX]) // hits something
                 ) {
                     return true;
                 }
@@ -232,7 +233,7 @@ function clearLines() {
     let linesCleared = 0;
 
     for (let i = ROWS - 1; i >= 0; i--) {
-        if (grid[i].every(cell => cell !== null)) {
+        if (grid[i].every((cell) => cell !== null)) {
             grid.splice(i, 1); // Remove the full row
             grid.unshift(Array(COLS).fill(null)); // Add a new empty row at the top
             linesCleared++;
@@ -244,7 +245,7 @@ function clearLines() {
         score += linesCleared * 10;
         scoreBoard.innerText = "Score: " + score;
         setHScore();
-        tick = Math.max(100, tick - (linesCleared * 20));
+        tick = Math.max(100, tick - linesCleared * 20);
         clearInterval(tickInterval);
         tickInterval = setInterval(ticker, tick);
         // let lineClearSound = new Audio('sounds/delete line.wav');
@@ -273,7 +274,7 @@ function getHScore() {
 function aboutToCollide(grid, pObj) {
     const simulatedPiece = {
         ...pObj,
-        y: pObj.y + 1
+        y: pObj.y + 1,
     };
     return collides(grid, simulatedPiece);
 }
@@ -281,7 +282,7 @@ function aboutToCollide(grid, pObj) {
 function ticker() {
     pieceObj.y++;
     let played = false;
-    if (aboutToCollide(grid, pieceObj) && !(collides(grid, pieceObj))) {
+    if (aboutToCollide(grid, pieceObj) && !collides(grid, pieceObj)) {
         // let touchSound = new Audio('sounds/touch floor.wav');
         touchSound.cloneNode().play();
     }
@@ -293,14 +294,13 @@ function ticker() {
 
         if (collides(grid, pieceObj)) {
             // let overSound = new Audio('sounds/gameover.wav');
-            overSound.cloneNode().play()
+            overSound.cloneNode().play();
             clearInterval(tickInterval);
             scoreBoard.innerText = "Game Over";
             scoreBoard.style.color = "red";
         }
     }
     render();
-
 }
 
 function generateGrid() {
@@ -321,7 +321,7 @@ function moveDown() {
     }
 
     pieceObj.y++;
-    if ((collides(grid, pieceObj))) {
+    if (collides(grid, pieceObj)) {
         pieceObj.y--;
         return 0;
     }
@@ -330,7 +330,7 @@ function moveDown() {
 
 function moveLeft() {
     pieceObj.x--;
-    if ((collides(grid, pieceObj))) {
+    if (collides(grid, pieceObj)) {
         pieceObj.x++;
         return 0;
     }
@@ -339,10 +339,10 @@ function moveLeft() {
 
 function moveRight() {
     pieceObj.x++;
-    if ((collides(grid, pieceObj))) {
+    if (collides(grid, pieceObj)) {
         pieceObj.x--;
         return 0;
-    } 
+    }
     render();
 }
 
@@ -370,7 +370,7 @@ function rotate() {
     }
 }
 
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
     let key = e.code;
     if (key == "ArrowDown") {
         moveDown();
@@ -381,24 +381,26 @@ document.addEventListener("keydown", function(e) {
     } else if (key == "ArrowUp") {
         rotate();
         // let rotateSound = new Audio("sounds/rotation.wav");
-        rotateSound.cloneNode().play()
+        rotateSound.cloneNode().play();
     }
 });
 
 window.onload = () => {
     // Warm up all sounds by playing muted
     const sounds = [touchSound, rotateSound, lineClearSound, overSound];
-    sounds.forEach(snd => {
+    sounds.forEach((snd) => {
         snd.volume = 0;
-        snd.play().then(() => {
-            snd.pause();
-            snd.currentTime = 0;
-            snd.volume = 1;
-        }).catch(e => {
-            // some browsers block autoplay, ignore silently
-        });
+        snd.play()
+            .then(() => {
+                snd.pause();
+                snd.currentTime = 0;
+                snd.volume = 1;
+            })
+            .catch((e) => {
+                // some browsers block autoplay, ignore silently
+            });
     });
-    
+
     const stored = getHScore();
     if (stored !== null) {
         highscore.innerText = "High Score: " + parseInt(stored);
@@ -408,7 +410,7 @@ window.onload = () => {
 };
 
 let playpauseB = document.getElementById("playpause");
-playpauseB.addEventListener("click",() => {
+playpauseB.addEventListener("click", () => {
     const currentStyle = getComputedStyle(playpauseB).backgroundImage;
     const firstUrl = currentStyle.split(",")[0].trim();
     const secondUrl = currentStyle.split(",")[1].trim();
@@ -425,3 +427,16 @@ let restartB = document.getElementById("restart");
 restartB.addEventListener("click", () => {
     location.reload();
 });
+
+function hasVerticalScrollbar() {
+    return (
+        document.documentElement.scrollHeight >
+        document.documentElement.clientHeight
+    );
+}
+
+let scorebs = document.getElementById("scoreBoard");
+
+if (hasVerticalScrollbar()) {
+    scorebs.style.fontSize = "18px";
+}
