@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List Styling Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: darkblue;
+    }
+
+    ul {
+      list-style-type: square;
+      list-style-position: inside;
+      background-color: #e8f4ff;
+      padding: 15px;
+    }
+
+    ol {
+      list-style-type: upper-roman;
+      list-style-position: outside;
+      background-color: #e8ffe8;
+      padding: 15px;
+    }
+
+    .custom {
+      list-style-image: url('https://cdn-icons-png.flaticon.com/16/25/25694.png');
+    }
+  </style>
+</head>
+<body>
+  <h2>Unordered List Example</h2>
+  <ul>
+    <li><b>Circle</b> bullet replaced by <b>Square</b></li>
+    <li>Items are <i>inside</i> the content box</li>
+    <li>Background color added for clarity</li>
+  </ul>
+
+  <h2>Ordered List Example</h2>
+  <ol>
+    <li>Upper Roman numerals used</li>
+    <li>Position is <b>outside</b></li>
+    <li>Padding and background color added</li>
+  </ol>
+
+  <h2>Custom Image List Example</h2>
+  <ul class="custom">
+    <li>List with custom image bullets</li>
+    <li>Demonstrates <b>list-style-image</b></li>
+  </ul>
+
+  <footer><b>Apurva Kumar, 04814902024</b></footer>
+</body>
+</html>
